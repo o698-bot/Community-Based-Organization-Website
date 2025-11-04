@@ -2,6 +2,21 @@ body{
     font-family: 'Lato', sans-serif;
     font-weight: 400;
 }
+
+header {
+  position: fixed;       /* Fix it to the viewport */
+  top: 0;                /* Stick to the top */
+  left: 0;
+  width: 100%;           /* Full width */
+  background-color: white; /* Add background so it doesn’t overlap content */
+  z-index: 1000;         /* Keep it above other elements */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional: nice subtle shadow */
+}
+
+main {
+  margin-top: 200px; /* Adjust this to match your header height */
+}
+
 header .container {
     display: flex;
     justify-content: space-between; /* logo left, nav right */
@@ -50,12 +65,12 @@ header .container {
     font-family: "Julius Sans One", sans-serif;
     font-weight: 400;
     text-align: center;
-    font-size: 70px;
+    font-size: 90px;
   }
 
   p{
     text-align: center;
-    font-size: 20px;
+    font-size: 25px;
   }
 
   .button1 {
@@ -92,4 +107,12 @@ header .container {
     justify-content: center; /* Centers horizontally */
     align-items: center;     /* Centers vertically (optional) */
     gap: 15px; 
+  }
+
+  .hero-img{
+    margin-top: 150px;
+  }
+
+  img{
+    border-radius: 20px;
   }
