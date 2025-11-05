@@ -45,7 +45,7 @@ header .container {
   }
   
   ul li a:hover {
-    background-color: #ffa500;
+    background-color: #3cb371;
   }
 
   @media (max-width: 768px) {
@@ -84,6 +84,7 @@ header .container {
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 16px;
+    
   }
   .button {
     background-color:white;
@@ -99,7 +100,7 @@ header .container {
   }
   
   .button1:hover, .button:hover {
-    background-color: #ffa500;
+    background-color: #3cb371;
   }
   
   .btn-container{
@@ -110,9 +111,111 @@ header .container {
   }
 
   .hero-img{
-    margin-top: 150px;
+    margin-top: 100px;
+    text-align: center;
+    padding: 50px;
   }
 
-  img{
+  .hero-img img{
+      width: 83%;
+      height: auto;
     border-radius: 20px;
   }
+
+  .hero-section {
+    padding: 60px 10%;
+    background-color: #fff;
+  }
+  
+  .hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap; /* responsive for small screens */
+  }
+  
+  .hero-image {
+    flex: 1 1 45%;
+  }
+  
+  .hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+    max-height: 420px;
+  }
+  
+  .hero-content {
+    flex: 1 1 50%;
+  }
+  
+  .subheading {
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    text-align: left;
+  }
+  
+  .hero-content h1 {
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.3;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .description {
+    color: rgb(0, 0, 0);
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    font-weight: 300;
+    text-align: left;
+  }
+  
+  .hero-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px 0;
+    display:block
+  }
+  
+  .hero-list li {
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+    display: block;
+  }
+  
+  .hero-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #2a7d2e; /* green check */
+  }
+  
+  .hero-buttons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 16px;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .btn.primary {
+    background-color: #2a7d2e;
+    color: #fff;
+  }
+  
+  .btn.secondary {
+    color: #2a7d2e;
+    border: 1px solid #2a7d2e;
+  }
+  
