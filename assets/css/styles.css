@@ -368,5 +368,170 @@ header .container {
       width: 100%;
     }
   }
+
+  /* impact*/
+
+  .impact-section {
+
+    padding: 40px 10%;
+    background-color: #f9f9f9;
+  }
   
+  .impact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    gap: 20px;
+  }
+  
+  /* Card positioning */
+  .card3 {
+    grid-row: span 2; /* Spans vertically */
+  }
+  
+  .card4 {
+    grid-column: span 2; /* Spans horizontally */
+  }
+  
+  /* Card styling */
+  .impact-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+  }
+  .impact-card1 {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    display: flex;
+    width:100%;
+    flex-direction: row;
+    justify-content: space-between;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+  }
+  
+  /* Add breathing room inside text */
+  .impact-card h3 {
+    margin-bottom: 10px;
+  }
+  
+  .impact-card p {
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
+    margin-bottom: 10px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    text-align: left;
+  }
+  
+  .impact-card a {
+    color: #0078d4;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .impact-card1 a {
+    color: #0078d4;
+    text-decoration: none;
+    font-weight: 600;
+    font: 0.5em sans-serif;
+  }
+  
+  .impact-card a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Hover effects */
+  .impact-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  }
+  .impact-card1:hover {
+    transform: translateY(-3px); /* Hover effect */
+  }
+  
+  /* Responsiveness */
+  @media (max-width: 900px) {
+    .impact-section {
+      padding: 40px 30px;
+    }
+    .impact-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .impact-section {
+      padding: 30px 20px;
+    }
+    .impact-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .card1-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .card1-content {
+    padding: 10px;
+    width: 70%;
+  }
+  /* .card1, .card2, .card3, .card4 {
+    padding: 10px;
+  } */
+
+  .card1, .card2, .card3, .card4, h3 {
+    font-family: "Julius Sans One", sans-serif;
+    font-size: 2rem;
+    font-weight: 300;
+    text-align: left;
+    font-size: 30px;
+  }
+
+  .card-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+  }
+
+  .card1, .card2, .card3, .card4, h3 {
+    font-family: "Julius Sans One", sans-serif;
+    font-size: 2rem;
+    font-weight: 300;
+    text-align: left;
+    font-size: 30px;
+  }
+
+  .card1, .card2, .card3, .card4 p {
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
+    margin-bottom: 10px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    text-align: left;
+  }
+
+  .card1-content h3 {
+    font-family: "Julius Sans One", sans-serif;
+    font-size: 2rem;
+    font-weight: 300;
+    text-align: left;
+    /* margin-top: 0%;
+    margin-bottom: 5%; */
+  }
+  
+  .impact-subheading{
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    margin-bottom: 2px;
+    font-size: 0.9rem;
+    text-align: left;
+    margin-top: 25%;
+  }
   
