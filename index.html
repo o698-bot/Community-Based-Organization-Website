@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
@@ -79,7 +80,7 @@
             <div class="cards-container">
               <div class="card1">
                 <div class="card1-content">
-                    <h3>Learn</h3>
+                    <h4 class="card1h3">Learn</h4>
                     <h2>Comprehensive Training Across<br> Key Industries</h2>
                     <p>Empowering individuals with practical workplace skills</p>
                     <a href="#" class="btn primary">Explore →</a>
@@ -128,42 +129,48 @@
         <div class="impact-grid">
       
           <div class="impact-card card2">
-            <h3>Opportunities<br> for Youth</h3>
-            <p>Breaking barriers of unemployment through practical training</p>
-            <a href="#">Explore →</a>
+            <div class="impact-card-content">
+              <h3>Opportunities<br> for Youth</h3>
+              <p>Breaking barriers of unemployment through practical training</p>
+              <a href="#">Explore →</a>
+            </div>
           </div>
       
           <div class="impact-card card2">
-            <h3>Support for<br> Women</h3>
-            <p>Creating economic independence through specialized skills</p>
-            <a href="#">Learn →</a>
+            <div class="impact-card-content">
+              <h3>Support for<br> Women</h3>
+              <p>Creating economic independence through specialized skills</p>
+              <a href="#">Learn →</a>
+            </div>
           </div>
           
+
+
           <div class="impact-card card3">
 
             <div class="card1-image">
               <img src="assets/images/pic8.jpg" alt="Comprehensive training">
             </div>
-            <p class="impact-subheading" style="margin-top:5%;">Community</p>
-            <h3>Supporting<br> Vulnerable and<br> Marginalized<br> Groups</h3>
-            <p>Building resilience through targeted skill development</p>
-            <a href="#">Connect →</a>
+            <div class="impact-card-content">
+              <p class="impact-subheading" style="margin-top:5%;margin-bottom:0%;">Community</p>
+              <h3>Supporting<br> Vulnerable and<br> Marginalized<br> Groups</h3>
+              <p>Building resilience through targeted skill development</p>
+              <a href="#">Connect →</a>
+            </div>
           </div>
 
 
 
           <div class="impact-card1 card4">
-
-            
             <div class="card1-image">
               <img src="assets/images/pic7.jpg" alt="Comprehensive training">
             </div>
           
             <div class="card1-content">
-              <p class="impact-subheading">Access</p>
-              <h3 style="margin-top: 0%;margin-bottom: 5%;">Empowering<br> Persons with<br> Disabilities</h3>
+              <p class="impact-subheading" >Access</p>
+              <h3 style="margin-top: 0%;margin-bottom:5%;">Empowering<br> Persons with<br> Disabilities</h3>
               <p>Inclusive training programs that unlock potential</p>
-              <a href="#">Discover →</a>
+              <a href="#" style="font-weight:600;">Discover →</a>
             </div>
 
           </div>
@@ -171,6 +178,92 @@
         </div>
       </section>
 
+      <section class="partners-carousel">
+        <h3>TRUSTED BY LEADING ORGANIZATION SUPPORTING COMMUNITY<br> DEVELOPMENT</h3>
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="assets/images/NITA.png" alt="NITA"></div>
+              <div class="swiper-slide"><img src="assets/images/KNEC.png" alt="KNEC"></div>
+              <div class="swiper-slide"><img src="assets/images/TVET.png" alt="TVET"></div>
+              <div class="swiper-slide"><img src="assets/images/gok.png" alt="TVET"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="progress-section">
+        <div class="measure-card-alignment">
+          <div class="progress">
+            <h1>MEASURING OUR<br> IMPACT ON<br> COMMUNITY<br> TRANSFORMATION</h1>
+            <p>One Touch ICT has created meaningful change through<br> dedicated skills training and community support </p>
+            <div class="hero-buttons" style="margin-bottom:10%">
+              <a href="#" class="btn primary">Donate</a>
+              <a href="#" class="btn secondary" >Learn →</a>
+            </div>
+          </div>
+      
+          <div class="measure-grid">
+      
+            <div class="measure-card card2">
+              <div class="measure-card-content">
+                <h3>Opportunities<br> for Youth</h3>
+                <p>Breaking barriers of unemployment through practical training</p>
+                <a href="#">Explore →</a>
+              </div>
+            </div>
+        
+            <div class="measure-card card2">
+              <div class="measure-card-content">
+                <h3>Support for<br> Women</h3>
+                <p>Creating economic independence through specialized skills</p>
+                <a href="#">Learn →</a>
+              </div>
+            </div>
+            <div class="measure-card card2">
+              <div class="measure-card-content">
+                <h3>Opportunities<br> for Youth</h3>
+                <p>Breaking barriers of unemployment through practical training</p>
+                <a href="#">Explore →</a>
+              </div>
+            </div>
+        
+            <div class="measure-card card2">
+              <div class="measure-card-content">
+                <h3>Support for<br> Women</h3>
+                <p>Creating economic independence through specialized skills</p>
+                <a href="#">Learn →</a>
+              </div>
+            </div>
+            
+  
+
+        
+          </div>
+      </div>
+        </section>
+
    </main>
+   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+   <script>
+    const swiper = new Swiper('.swiper-container', {
+      loop: true,
+      slidesPerView: 4,
+      spaceBetween: 40,
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 3
+        },
+        480: {
+          slidesPerView: 2
+        },
+        320: {
+          slidesPerView: 1
+        }
+      }
+    });
+  </script>
 </body>
 </html>

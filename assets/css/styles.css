@@ -181,7 +181,7 @@ header .container {
     color: rgb(0, 0, 0);
     font-size: 0.9rem;
     margin-bottom: 20px;
-    font-weight: 300;
+    font-weight: 400;
     text-align: left;
   }
   
@@ -308,7 +308,14 @@ header .container {
     font-family: 'Lato', sans-serif;
     font-weight: 400;
   }
-  
+  .card1h3{
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
+    margin-top: 100px;
+    margin-bottom: 10px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+  }
   .card-content h3 {
     color: rgb(0, 0, 0);
     font-size: 1rem;
@@ -450,6 +457,7 @@ header .container {
   }
   .impact-card1:hover {
     transform: translateY(-3px); /* Hover effect */
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
   }
   
   /* Responsiveness */
@@ -529,9 +537,275 @@ header .container {
   .impact-subheading{
     color: rgb(0, 0, 0);
     font-weight: 600;
-    margin-bottom: 2px;
+    margin-bottom: 2%;
     font-size: 0.9rem;
     text-align: left;
     margin-top: 25%;
   }
+  .impact-card-content{
+    padding: 10px;
+  }
+
+  /*PARTNERS*/
+
+  .partners-carousel h3{
+    font-family: "Julius Sans One", sans-serif;
+    font-weight: 300;
+    text-align:center;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    margin-top: 5%;
+  }
+  .partners-carousel {
+    background: #fff;
+    padding: 40px 0;
+    text-align: center;
+  }
+  
+  
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .swiper-slide img {
+    max-width: 120px;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .swiper-slide img:hover {
+    transform: scale(1.1);
+  }
+
+  /*Progress*/
+
+  .progress-section{
+    padding: 40px 10%;
+  }
+
+
+  .progress h1{
+    font-family: "Julius Sans One", sans-serif;
+    font-weight: 300;
+    text-align:left;
+    font-size: 2rem;
+    color: rgb(0, 0, 0);
+    margin-top: 10%;
+  }
+  .progress p{
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
+    /* margin-bottom: 10%; */
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    text-align: left;
+  }
+
+
+/*Measure*/
+  .measure-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto;
+    gap: 2px;
+  }
+
+  /* Card styling */
+  .measure-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+  }
+
+  
+  /* Add breathing room inside text */
+  .measure-card h3 {
+    margin-bottom: 10px;
+  }
+  
+  .measure-card p {
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
+    margin-bottom: 10px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    text-align: left;
+  }
+  
+  .measure-card a {
+    color: #0078d4;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  
+  .measure-card a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Hover effects */
+  .measure-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  }
+
+  
+  /* Responsiveness */
+  @media (max-width: 900px) {
+    .progress-section {
+      padding: 40px 30px;
+    }
+    .measure-grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .progress-section {
+      padding: 30px 20px;
+    }
+    .measure-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .card1-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .card1-content {
+    padding: 10px;
+    width: 70%;
+  }
+  /* .card1, .card2, .card3, .card4 {
+    padding: 10px;
+  } */
+
+  .card1, .card2, .card3, .card4, h3 {
+    font-family: "Julius Sans One", sans-serif;
+    font-size: 2rem;
+    font-weight: 300;
+    text-align: left;
+    font-size: 30px;
+  }
+
+  .card-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+  }
+
+  .card1, .card2, .card3, .card4, h3 {
+    font-family: "Julius Sans One", sans-serif;
+    font-size: 2rem;
+    font-weight: 300;
+    text-align: left;
+    font-size: 30px;
+  }
+
+  .card1, .card2, .card3, .card4 p {
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
+    margin-bottom: 10px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    text-align: left;
+  }
+
+  .card1-content h3 {
+    font-family: "Julius Sans One", sans-serif;
+    font-size: 2rem;
+    font-weight: 300;
+    text-align: left;
+    /* margin-top: 0%;
+    margin-bottom: 5%; */
+  }
+  
+  .measure-card-content{
+    padding: 10px;
+  }
+
+  /* div.measure-card-alignment {
+    width:100%;
+    overflow:auto;
+  }
+  div.measure-card-alignment div.progress div.measure-grid {
+    width:45%;  
+    float:left;
+  } */
+
+  .measure-card-alignment {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start; /* keeps them top-aligned */
+    gap: 1px; /* space between progress and measure-grid */
+    width: 100%;
+    flex-wrap: wrap; /* makes it responsive */
+  }
+  
+  .progress {
+    flex: 1; /* takes available space */
+    min-width: 300px; /* prevents squishing on small screens */
+  }
+  
+  .measure-grid {
+    flex: 1; /* takes equal space as progress */
+    min-width: 300px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .measure-card-alignment,.measure-grid {
+      flex-direction: column;
+    }
+  }
+
+  .progress {
+  flex: 0 0 38%;
+}
+
+.measure-grid {
+  flex: 0 0 60%;
+}
+
+/* .measure-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.measure-card-alignment {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.progress {
+  flex: 1 1 40%;
+  padding-right: 20px;
+}
+
+@media (max-width: 768px) {
+  .measure-card-alignment {
+    flex-direction: column;
+  }
+
+  .progress {
+    text-align: center;
+    padding-right: 0;
+  }
+} */
+
+
   
