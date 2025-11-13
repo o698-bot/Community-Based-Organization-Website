@@ -835,3 +835,146 @@ header .container {
     font-weight: 400;
     text-align: left;
   }
+
+  /* footer*/
+  footer {
+    background-color: #d9d9d9;
+    padding: 40px 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+  /* ===== Left Section ===== */
+  .footer-left {
+    flex: 1 1 300px;
+    max-width: 350px;
+  }
+
+  .footer-left h2 {
+    font-family: 'Cursive';
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .footer-left p {
+    margin: 5px 0;
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
+    margin-bottom: 10px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    text-align: left;
+  }
+
+  .footer-left a {
+    color: #333;
+    text-decoration: none;
+  }
+
+  .social-icons {
+    margin-top: 10px;
+  }
+
+  .social-icons a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+  }
+
+  .footer-img img {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 250px;
+    border-radius: 5px;
+  }
+
+  /* ===== Right Section ===== */
+  .footer-links {
+    display: flex;               
+    align-items: flex-start;    
+    justify-content: flex-start; 
+    gap: 60px;                   
+  }
+  
+  
+  .footer-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .footer-links li {
+    margin-bottom: 10px;         
+  }
+
+  .fl1 li a{
+    display: block;
+  }
+  
+  .footer-links a {
+    text-decoration: none;
+    color: #000;
+    font-size: 15px;
+  }
+  
+  .footer-links a:hover {
+    text-decoration: underline;
+  }
+  
+
+  
+  
+  /* ===== Bottom Bar ===== */
+  .footer-bottom {
+    background-color: #d9d9d9;
+    border-top: 1px solid #bcbcbc;
+    text-align: center;
+    padding: 15px 10px;
+    font-size: 14px;
+  }
+
+  .footer-bottom a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333;
+  }
+
+  /* ===== RESPONSIVE DESIGN ===== */
+  @media (max-width: 900px) {
+    footer {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .footer-links {
+      gap: 40px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    footer {
+      padding: 30px 20px;
+    }
+
+    .footer-links {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .footer-left, 
+    .footer-links {
+      max-width: 100%;
+    }
+
+    .footer-img img {
+      width: 100%;
+      max-width: none;
+    }
+
+    .footer-bottom {
+      font-size: 12px;
+    }
+  }
