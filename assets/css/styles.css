@@ -1,980 +1,1213 @@
 body{
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
 }
 
 header {
-  position: fixed;       /* Fix it to the viewport */
-  top: 0;                /* Stick to the top */
-  left: 0;
-  width: 100%;           /* Full width */
-  background-color: #3cbe71; /* Add background so it doesn’t overlap content */
-  z-index: 1000;         /* Keep it above other elements */
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional: nice subtle shadow */
+position: fixed;       /* Fix it to the viewport */
+top: 0;                /* Stick to the top */
+left: 0;
+width: 100%;           /* Full width */
+background-color: #3cbe71; /* Add background so it doesn’t overlap content */
+z-index: 1000;         /* Keep it above other elements */
+box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional: nice subtle shadow */
 }
 
 main {
-  margin-top: 200px; /* Adjust this to match your header height */
+margin-top: 200px; /* Adjust this to match your header height */
 }
 
 header .container {
-    display: flex;
-    justify-content: space-between; /* logo left, nav right */
-    align-items: center;            /* vertically center both */
-  }
-  
-  /* Logo styling */
-  .logo {
-    display: flex;
-    align-items: center;
-    gap: 10px; /* space between logo image and text */
-  }
-  .logo h1{
-    font-family: "Julius Sans One", sans-serif;
-    font-weight: 700;
-    text-align:;
-    font-size: 20px;
-    color: white;
-  }
-  
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-  }
-  
-  ul li a {
-    display: block;
-    color: rgb(0, 0, 0);
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  ul li a:hover {
-    background-color:white;
-  }
+  display: flex;
+  justify-content: space-between; /* logo left, nav right */
+  align-items: center;            /* vertically center both */
+}
 
-  @media (max-width: 768px) {
-    header .container {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    nav ul {
-      flex-direction: column;
-      gap: 15px;
-      margin-top: 10px;
-    }
-    .card, .card1 {
-      width: 100%;
-    }
-  }
+/* Logo styling */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* space between logo image and text */
+}
+.logo h1{
+  font-family: "Julius Sans One", sans-serif;
+  font-weight: 700;
+  text-align:;
+  font-size: 20px;
+  color: white;
+}
 
-  h1{
-    font-family: "Julius Sans One", sans-serif;
-    font-weight: 400;
-    text-align: center;
-    font-size: 90px;
-  }
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
 
-  p{
-    text-align: center;
-    font-size: 25px;
-  }
+ul li a {
+  display: block;
+  color: rgb(0, 0, 0);
+  padding: 14px 16px;
+  text-decoration: none;
+}
 
-  .button1 {
-    background-color:blue;
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 16px;
-    
-  }
-  .button {
-    background-color:white;
-    color: black;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    margin: 4px 2px;
-    cursor: pointer;
-    border: 1px solid black;
-    border-radius: 16px;
-  }
-  
-  .button1:hover, .button:hover {
-    background-color: #3cb371;
-  }
-  
-  .btn-container{
-    display: flex;
-    justify-content: center; /* Centers horizontally */
-    align-items: center;     /* Centers vertically (optional) */
-    gap: 15px; 
-  }
+ul li a:hover {
+  background-color:white;
+}
 
-  .hero-img{
-    margin-top: 100px;
-    text-align: center;
-    padding: 50px;
-  }
-
-  .hero-img img{
-      width: 83%;
-      height: auto;
-    border-radius: 20px;
-  }
-
-  .hero-section {
-    padding: 60px 10%;
-    background-color: #fff;
-  }
-  
-  .hero-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-    flex-wrap: wrap; /* responsive for small screens */
-  }
-  
-  .hero-image {
-    flex: 1 1 45%;
-  }
-  
-  .hero-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
-    object-fit: cover;
-    max-height: 420px;
-  }
-  
-  .hero-content {
-    flex: 1 1 50%;
-  }
-  
-  .subheading {
-    color: rgb(0, 0, 0);
-    font-weight: 600;
-    margin-bottom: 10px;
-    font-size: 0.9rem;
-    text-align: left;
-  }
-  
-  .hero-content h1 {
-    font-size: 2rem;
-    font-weight: 400;
-    line-height: 1.3;
-    margin-bottom: 20px;
-    text-align: left;
-  }
-  
-  .description {
-    color: rgb(0, 0, 0);
-    font-size: 0.9rem;
-    margin-bottom: 20px;
-    font-weight: 400;
-    text-align: left;
-  }
-  
-  .hero-list {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 30px 0;
-    display:block
-  }
-  
-  .hero-list li {
-    margin-bottom: 10px;
-    padding-left: 25px;
-    position: relative;
-    display: block;
-  }
-  
-  .hero-list li::before {
-    content: "✓";
-    position: absolute;
-    left: 0;
-    color: #2a7d2e; /* green check */
-  }
-  
-  .hero-buttons {
-    display: flex;
-    gap: 15px;
-  }
-  
-  .btn {
-    display: inline-block;
-    padding: 5px 10px;
-    border-radius: 16px;
-    text-decoration: none;
-    font-weight: 500;
-  }
-  
-  .btn.primary {
-    background-color: #2a7d2e;
-    color: #fff;
-  }
-  
-  .btn.secondary {
-    color: #2a7d2e;
-    border: 1px solid #2a7d2e;
-  }
-
-  .skills h1{
-    font-family: "Julius Sans One", sans-serif;
-    font-weight: 400;
-    text-align: center;
-    font-size: 50px;
-  }
-
-  .cards-section {
-    padding: 40px 10%;
-    background-color: #f9f9f9;
-  }
-  
-  .cards-container {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap; /* Ensures responsive stacking on smaller screens */
-  }
-  
-  .card1 {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 55%;
-    overflow: hidden;
-    display: flex;
-    flex-direction: row;
-    transition: transform 0.3s ease;
-  }
-  
-  .card {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 20%;
-    overflow: hidden;
-    display: flex;
+@media (max-width: 768px) {
+  header .container {
     flex-direction: column;
-    transition: transform 0.3s ease;
+    align-items: flex-start;
   }
-  
-  .card:hover, .card1:hover {
-    transform: translateY(-10px); /* Hover effect */
+
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
   }
-  
-  .card-image {
+  .card, .card1 {
     width: 100%;
-    height: 200px;
-    overflow: hidden;
   }
+}
 
-  .card1-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .card-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .card-content {
-    padding: 10px;
-    width: 60%;
-  }
-  .card1-content {
-    padding: 10px;
-    width: 60%;
-  }
+h1{
+  font-family: "Julius Sans One", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  font-size: 90px;
+}
 
-  .card1-content h3 {
-    color: rgb(0, 0, 0);
-    font-size: 1rem;
-    margin-top: 100px;
-    margin-bottom: 10px;
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-  }
-  .card1h3{
-    color: rgb(0, 0, 0);
-    font-size: 1rem;
-    margin-top: 100px;
-    margin-bottom: 10px;
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-  }
-  .card-content h3 {
-    color: rgb(0, 0, 0);
-    font-size: 1rem;
-    margin-top: 50px;
-    margin-bottom: 10px;
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-  }
-  
-  .card-content h2 {
-    font-family: "Julius Sans One", sans-serif;
-    font-size: 2rem;
-    font-weight: 300;
-    text-align: left;
-    font-size: 30px;
-  }
-  .card1-content h2 {
-    font-family: "Julius Sans One", sans-serif;
-    font-size: 2rem;
-    font-weight: 300;
-    text-align: left;
-    font-size: 30px;
-  }
-  
-  .card-content p {
-    color: rgb(0, 0, 0);
-    font-size: 1rem;
-    margin-bottom: 10px;
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    text-align: left;
-  }
-  .card1-content p {
-    color: rgb(0, 0, 0);
-    font-size: 1rem;
-    margin-bottom: 10px;
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    text-align: left;
-  }
-  
-  .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: 500;
-  }
-  
-  .btn.primary {
-    background-color: #2a7d2e;
-    color: #fff;
-  }
-  
-  @media (max-width: 768px) {
-    .card {
-      width: 100%;
-    }
-  }
+p{
+  text-align: center;
+  font-size: 25px;
+}
 
-  /* impact*/
+.button1 {
+  background-color:blue;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 16px;
+  
+}
+.button {
+  background-color:white;
+  color: black;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border: 1px solid black;
+  border-radius: 16px;
+}
 
-  .impact-section {
+.button1:hover, .button:hover {
+  background-color: #3cb371;
+}
 
-    padding: 40px 10%;
-    background-color: #f9f9f9;
-  }
-  
-  .impact-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto auto;
-    gap: 20px;
-  }
-  
-  /* Card positioning */
-  .card3 {
-    grid-row: span 2; /* Spans vertically */
-  }
-  
-  .card4 {
-    grid-column: span 2; /* Spans horizontally */
-  }
-  
-  /* Card styling */
-  .impact-card {
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    transition: all 0.3s ease;
-  }
-  .impact-card1 {
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    display: flex;
-    width:100%;
-    flex-direction: row;
-    justify-content: space-between;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    transition: all 0.3s ease;
-  }
-  
-  /* Add breathing room inside text */
-  .impact-card h3 {
-    margin-bottom: 10px;
-  }
-  
-  .impact-card p {
-    color: rgb(0, 0, 0);
-    font-size: 1rem;
-    margin-bottom: 10px;
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    text-align: left;
-  }
-  
-  .impact-card a {
-    color: #0078d4;
-    text-decoration: none;
-    font-weight: 600;
-  }
-  .impact-card1 a {
-    color: #0078d4;
-    text-decoration: none;
-    font-weight: 600;
-    font: 0.5em sans-serif;
-  }
-  
-  .impact-card a:hover {
-    text-decoration: underline;
-  }
-  
-  /* Hover effects */
-  .impact-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-  }
-  .impact-card1:hover {
-    transform: translateY(-3px); /* Hover effect */
-    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-  }
-  
-  /* Responsiveness */
-  @media (max-width: 900px) {
-    .impact-section {
-      padding: 40px 30px;
-    }
-    .impact-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  
-  @media (max-width: 600px) {
-    .impact-section {
-      padding: 30px 20px;
-    }
-    .impact-grid {
-      grid-template-columns: 1fr;
-    }
-  }
+.btn-container{
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center;     /* Centers vertically (optional) */
+  gap: 15px; 
+}
 
-  .card1-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-  }
+.hero-img{
+  margin-top: 100px;
+  text-align: center;
+  padding: 50px;
+}
 
-  .card1-content {
-    padding: 10px;
-    width: 70%;
-  }
-  /* .card1, .card2, .card3, .card4 {
-    padding: 10px;
-  } */
-
-  .card1, .card2, .card3, .card4, h3 {
-    font-family: "Julius Sans One", sans-serif;
-    font-size: 2rem;
-    font-weight: 300;
-    text-align: left;
-    font-size: 30px;
-  }
-
-  .card-image {
-    width: 100%;
-    height: 200px;
-    overflow: hidden;
-  }
-
-  .card1, .card2, .card3, .card4, h3 {
-    font-family: "Julius Sans One", sans-serif;
-    font-size: 2rem;
-    font-weight: 300;
-    text-align: left;
-    font-size: 30px;
-  }
-
-  .card1, .card2, .card3, .card4 p {
-    color: rgb(0, 0, 0);
-    font-size: 1rem;
-    margin-bottom: 10px;
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    text-align: left;
-  }
-
-  .card1-content h3 {
-    font-family: "Julius Sans One", sans-serif;
-    font-size: 2rem;
-    font-weight: 300;
-    text-align: left;
-    /* margin-top: 0%;
-    margin-bottom: 5%; */
-  }
-  
-  .impact-subheading{
-    color: rgb(0, 0, 0);
-    font-weight: 600;
-    margin-bottom: 2%;
-    font-size: 0.9rem;
-    text-align: left;
-    margin-top: 25%;
-  }
-  .impact-card-content{
-    padding: 10px;
-  }
-
-  /*PARTNERS*/
-
-  .partners-carousel h3{
-    font-family: "Julius Sans One", sans-serif;
-    font-weight: 300;
-    text-align:center;
-    font-size: 20px;
-    color: rgb(0, 0, 0);
-    margin-top: 5%;
-  }
-  .partners-carousel {
-    background: #fff;
-    padding: 40px 0;
-    text-align: center;
-  }
-  
-  
-  .swiper-slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .swiper-slide img {
-    max-width: 120px;
+.hero-img img{
+    width: 83%;
     height: auto;
-    transition: transform 0.3s ease;
-  }
-  
-  .swiper-slide img:hover {
-    transform: scale(1.1);
-  }
+  border-radius: 20px;
+}
 
-  /*Progress*/
+.hero-section {
+  padding: 60px 10%;
+  background-color: #fff;
+}
 
-  .progress-section{
-    padding: 40px 10%;
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap; /* responsive for small screens */
+}
+
+.hero-image {
+  flex: 1 1 45%;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  max-height: 420px;
+}
+
+.hero-content {
+  flex: 1 1 50%;
+}
+
+.subheading {
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+.hero-content h1 {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.3;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.description {
+  color: rgb(0, 0, 0);
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+  font-weight: 400;
+  text-align: left;
+}
+
+.hero-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px 0;
+  display:block
+}
+
+.hero-list li {
+  margin-bottom: 10px;
+  padding-left: 25px;
+  position: relative;
+  display: block;
+}
+
+.hero-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #2a7d2e; /* green check */
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 16px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.btn.primary {
+  background-color: #2a7d2e;
+  color: #fff;
+}
+
+.btn.secondary {
+  color: #2a7d2e;
+  border: 1px solid #2a7d2e;
+}
+
+.skills h1{
+  font-family: "Julius Sans One", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  font-size: 50px;
+}
+
+.cards-section {
+  padding: 40px 10%;
+  background-color: #f9f9f9;
+}
+
+.cards-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap; /* Ensures responsive stacking on smaller screens */
+}
+
+.card1 {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 55%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  transition: transform 0.3s ease;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 20%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+.card:hover, .card1:hover {
+  transform: translateY(-10px); /* Hover effect */
+}
+
+.card-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.card1-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 10px;
+  width: 60%;
+}
+.card1-content {
+  padding: 10px;
+  width: 60%;
+}
+
+.card1-content h3 {
+  color: rgb(0, 0, 0);
+  font-size: 1rem;
+  margin-top: 100px;
+  margin-bottom: 10px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+}
+.card1h3{
+  color: rgb(0, 0, 0);
+  font-size: 1rem;
+  margin-top: 100px;
+  margin-bottom: 10px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+}
+.card-content h3 {
+  color: rgb(0, 0, 0);
+  font-size: 1rem;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+}
+
+.card-content h2 {
+  font-family: "Julius Sans One", sans-serif;
+  font-size: 2rem;
+  font-weight: 300;
+  text-align: left;
+  font-size: 30px;
+}
+.card1-content h2 {
+  font-family: "Julius Sans One", sans-serif;
+  font-size: 2rem;
+  font-weight: 300;
+  text-align: left;
+  font-size: 30px;
+}
+
+.card-content p {
+  color: rgb(0, 0, 0);
+  font-size: 1rem;
+  margin-bottom: 10px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  text-align: left;
+}
+.card1-content p {
+  color: rgb(0, 0, 0);
+  font-size: 1rem;
+  margin-bottom: 10px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  text-align: left;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.btn.primary {
+  background-color: #2a7d2e;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
   }
+}
+
+/* impact*/
+
+.impact-section {
+
+  padding: 40px 10%;
+  background-color: #f9f9f9;
+}
+
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto;
+  gap: 20px;
+}
+
+/* Card positioning */
+.card3 {
+  grid-row: span 2; /* Spans vertically */
+}
+
+.card4 {
+  grid-column: span 2; /* Spans horizontally */
+}
+
+/* Card styling */
+.impact-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+.impact-card1 {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  display: flex;
+  width:100%;
+  flex-direction: row;
+  justify-content: space-between;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+/* Add breathing room inside text */
+.impact-card h3 {
+  margin-bottom: 10px;
+}
+
+.impact-card p {
+  color: rgb(0, 0, 0);
+  font-size: 1rem;
+  margin-bottom: 10px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  text-align: left;
+}
+
+.impact-card a {
+  color: #0078d4;
+  text-decoration: none;
+  font-weight: 600;
+}
+.impact-card1 a {
+  color: #0078d4;
+  text-decoration: none;
+  font-weight: 600;
+  font: 0.5em sans-serif;
+}
+
+.impact-card a:hover {
+  text-decoration: underline;
+}
+
+/* Hover effects */
+.impact-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+.impact-card1:hover {
+  transform: translateY(-3px); /* Hover effect */
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+/* Responsiveness */
+@media (max-width: 900px) {
+  .impact-section {
+    padding: 40px 30px;
+  }
+  .impact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .impact-section {
+    padding: 30px 20px;
+  }
+  .impact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card1-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card1-content {
+  padding: 10px;
+  width: 70%;
+}
+/* .card1, .card2, .card3, .card4 {
+  padding: 10px;
+} */
+
+.card1, .card2, .card3, .card4, h3 {
+  font-family: "Julius Sans One", sans-serif;
+  font-size: 2rem;
+  font-weight: 300;
+  text-align: left;
+  font-size: 30px;
+}
+
+.card-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.card1, .card2, .card3, .card4, h3 {
+  font-family: "Julius Sans One", sans-serif;
+  font-size: 2rem;
+  font-weight: 300;
+  text-align: left;
+  font-size: 30px;
+}
+
+.card1, .card2, .card3, .card4 p {
+  color: rgb(0, 0, 0);
+  font-size: 1rem;
+  margin-bottom: 10px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  text-align: left;
+}
+
+.card1-content h3 {
+  font-family: "Julius Sans One", sans-serif;
+  font-size: 2rem;
+  font-weight: 300;
+  text-align: left;
+  /* margin-top: 0%;
+  margin-bottom: 5%; */
+}
+
+.impact-subheading{
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+  margin-bottom: 2%;
+  font-size: 0.9rem;
+  text-align: left;
+  margin-top: 25%;
+}
+.impact-card-content{
+  padding: 10px;
+}
+
+/*PARTNERS*/
+
+.partners-carousel h3{
+  font-family: "Julius Sans One", sans-serif;
+  font-weight: 300;
+  text-align:center;
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+  margin-top: 5%;
+}
+.partners-carousel {
+  background: #fff;
+  padding: 40px 0;
+  text-align: center;
+}
 
 
-  .progress h1{
-    font-family: "Julius Sans One", sans-serif;
-    font-weight: 300;
-    text-align:left;
-    font-size: 2rem;
-    color: rgb(0, 0, 0);
-    margin-top: 0%;
-  }
-  .progress p{
-    color: rgb(0, 0, 0);
-    font-size: 1rem;
-    /* margin-bottom: 10%; */
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    text-align: left;
-  }
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  max-width: 120px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.swiper-slide img:hover {
+  transform: scale(1.1);
+}
+
+/*Progress*/
+
+.progress-section{
+  padding: 40px 10%;
+}
+
+
+.progress h1{
+  font-family: "Julius Sans One", sans-serif;
+  font-weight: 300;
+  text-align:left;
+  font-size: 2rem;
+  color: rgb(0, 0, 0);
+  margin-top: 0%;
+}
+.progress p{
+  color: rgb(0, 0, 0);
+  font-size: 1rem;
+  /* margin-bottom: 10%; */
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  text-align: left;
+}
 
 
 /*Measure*/
+.measure-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto auto;
+  gap: 2px;
+}
+
+/* Card styling */
+.measure-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+
+/* Add breathing room inside text */
+.measure-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.measure-card p {
+  color: rgb(0, 0, 0);
+  font-size: 1rem;
+  margin-bottom: 10px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  text-align: left;
+}
+
+.measure-card a {
+  color: #0078d4;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+
+.measure-card a:hover {
+  text-decoration: underline;
+}
+
+/* Hover effects */
+.measure-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+
+/* Responsiveness */
+@media (max-width: 900px) {
+  .progress-section {
+    padding: 40px 30px;
+  }
   .measure-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto auto;
-    gap: 2px;
+    grid-template-columns: repeat(1, 1fr);
   }
+}
 
-  /* Card styling */
-  .measure-card {
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    transition: all 0.3s ease;
+@media (max-width: 600px) {
+  .progress-section {
+    padding: 30px 20px;
   }
-
-  
-  /* Add breathing room inside text */
-  .measure-card h3 {
-    margin-bottom: 10px;
-    font-size: 1.2rem;
-  }
-  
-  .measure-card p {
-    color: rgb(0, 0, 0);
-    font-size: 1rem;
-    margin-bottom: 10px;
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    text-align: left;
-  }
-  
-  .measure-card a {
-    color: #0078d4;
-    text-decoration: none;
-    font-weight: 600;
-  }
-
-  
-  .measure-card a:hover {
-    text-decoration: underline;
-  }
-  
-  /* Hover effects */
-  .measure-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-  }
-
-  
-  /* Responsiveness */
-  @media (max-width: 900px) {
-    .progress-section {
-      padding: 40px 30px;
-    }
-    .measure-grid {
-      grid-template-columns: repeat(1, 1fr);
-    }
-  }
-  
-  @media (max-width: 600px) {
-    .progress-section {
-      padding: 30px 20px;
-    }
-    .measure-grid {
-      grid-template-columns: 1fr;
-    }
-  }
-
-  .card1-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-  }
-
-  .card1-content {
-    padding: 10px;
-    width: 70%;
-  }
-  /* .card1, .card2, .card3, .card4 {
-    padding: 10px;
-  } */
-
-  .card1, .card2, .card3, .card4, h3 {
-    font-family: "Julius Sans One", sans-serif;
-    font-size: 2rem;
-    font-weight: 300;
-    text-align: left;
-    font-size: 30px;
-  }
-
-  .card-image {
-    width: 100%;
-    height: 200px;
-    overflow: hidden;
-  }
-
-  .card1, .card2, .card3, .card4, h3 {
-    font-family: "Julius Sans One", sans-serif;
-    font-size: 2rem;
-    font-weight: 300;
-    text-align: left;
-    font-size: 30px;
-  }
-
-  .card1, .card2, .card3, .card4 p {
-    color: rgb(0, 0, 0);
-    font-size: 1rem;
-    margin-bottom: 10px;
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    text-align: left;
-  }
-
-  .measure-card-content{
-    padding: 10px;
-  }
-
-  .measure-card-content h2{
-    font-family: "Lato", sans-serif;
-    font-size: 2.5rem;
-    font-weight: 900;
-    text-align: left;
-  }
-
-  .measure-card-alignment {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start; /* keeps them top-aligned */
-    gap: 1px; /* space between progress and measure-grid */
-    width: 100%;
-    flex-wrap: wrap; /* makes it responsive */
-  }
-  
-  .progress {
-    flex: 1; /* takes available space */
-    min-width: 300px; /* prevents squishing on small screens */
-  }
-  
   .measure-grid {
-    flex: 1; /* takes equal space as progress */
-    min-width: 300px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    grid-template-columns: 1fr;
   }
-  
-  @media (max-width: 768px) {
-    .measure-card-alignment,.measure-grid {
-      flex-direction: column;
-    }
-  }
+}
 
-  .progress {
-  flex: 0 0 38%;
+.card1-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card1-content {
+  padding: 10px;
+  width: 70%;
+}
+/* .card1, .card2, .card3, .card4 {
+  padding: 10px;
+} */
+
+.card1, .card2, .card3, .card4, h3 {
+  font-family: "Julius Sans One", sans-serif;
+  font-size: 2rem;
+  font-weight: 300;
+  text-align: left;
+  font-size: 30px;
+}
+
+.card-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.card1, .card2, .card3, .card4, h3 {
+  font-family: "Julius Sans One", sans-serif;
+  font-size: 2rem;
+  font-weight: 300;
+  text-align: left;
+  font-size: 30px;
+}
+
+.card1, .card2, .card3, .card4 p {
+  color: rgb(0, 0, 0);
+  font-size: 1rem;
+  margin-bottom: 10px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  text-align: left;
+}
+
+.measure-card-content{
+  padding: 10px;
+}
+
+.measure-card-content h2{
+  font-family: "Lato", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-align: left;
+}
+
+.measure-card-alignment {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start; /* keeps them top-aligned */
+  gap: 1px; /* space between progress and measure-grid */
+  width: 100%;
+  flex-wrap: wrap; /* makes it responsive */
+}
+
+.progress {
+  flex: 1; /* takes available space */
+  min-width: 300px; /* prevents squishing on small screens */
 }
 
 .measure-grid {
-  flex: 0 0 60%;
+  flex: 1; /* takes equal space as progress */
+  min-width: 300px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .measure-card-alignment,.measure-grid {
+    flex-direction: column;
+  }
+}
+
+.progress {
+flex: 0 0 38%;
+}
+
+.measure-grid {
+flex: 0 0 60%;
 }
 
 .measure-subheading{
-  color: rgb(0, 0, 0);
-  font-weight: 600;
-  font-size: 0.9rem;
-  text-align: left;
-  margin-top: 20%;
+color: rgb(0, 0, 0);
+font-weight: 600;
+font-size: 0.9rem;
+text-align: left;
+margin-top: 20%;
 }
 
-  /*Change*/
-  .change-section {
-    padding: 40px 10%;
-    background-color: #f9f9f9;
-  }
-  
-  .cards-container {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap; /* Ensures responsive stacking on smaller screens */
-  }
-  
-  .change-card1 {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-height:500px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: row;
-    transition: transform 0.3s ease;
-  }
+/*Change*/
+.change-section {
+  padding: 40px 10%;
+  background-color: #f9f9f9;
+}
 
- .change-card1:hover {
-    transform: translateY(-10px); /* Hover effect */
-  }
+.cards-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap; /* Ensures responsive stacking on smaller screens */
+}
 
- .change-card1-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  .change-card1-image{
-    width: 50%;
-    height: 100%;
-  }
+.change-card1 {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-height:500px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  transition: transform 0.3s ease;
+}
 
- .change-card1-content {
-    padding: 50px;
-    margin-top: 5%;
-    width: 50%;
-  }
+.change-card1:hover {
+  transform: translateY(-10px); /* Hover effect */
+}
 
-  .change-card1-content h2 {
-    font-family: "Julius Sans One", sans-serif;
-    font-size: 2rem;
-    font-weight: 300;
-    text-align: left;
-    font-size: 30px;
-  }
+.change-card1-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.change-card1-image{
+  width: 50%;
+  height: 100%;
+}
 
- .change-card1-content p {
-    color: rgb(0, 0, 0);
-    font-size: 1rem;
-    margin-bottom: 10px;
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    text-align: left;
-  }
+.change-card1-content {
+  padding: 50px;
+  margin-top: 5%;
+  width: 50%;
+}
 
-  /* footer*/
+.change-card1-content h2 {
+  font-family: "Julius Sans One", sans-serif;
+  font-size: 2rem;
+  font-weight: 300;
+  text-align: left;
+  font-size: 30px;
+}
+
+.change-card1-content p {
+  color: rgb(0, 0, 0);
+  font-size: 1rem;
+  margin-bottom: 10px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  text-align: left;
+}
+
+/* footer*/
+footer {
+  background-color: #d9d9d9;
+  padding: 40px 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+/* ===== Left Section ===== */
+.footer-left {
+  flex: 1 1 300px;
+  max-width: 350px;
+}
+
+.footer-left h2 {
+  font-family: 'Cursive';
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.footer-left p {
+  margin: 5px 0;
+  color: rgb(0, 0, 0);
+  font-size: 1rem;
+  margin-bottom: 10px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  text-align: left;
+}
+
+.footer-left a {
+  color: #333;
+  text-decoration: none;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  margin-right: 10px;
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+
+.footer-img img {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 250px;
+  border-radius: 5px;
+}
+
+/* ===== Right Section ===== */
+.footer-links {
+  display: flex;               
+  align-items: flex-start;    
+  justify-content: flex-start; 
+  gap: 60px;                   
+}
+
+
+.footer-links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;         
+}
+
+.fl1 li a{
+  display: block;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #000;
+  font-size: 15px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+/* ===== Bottom Bar ===== */
+.footer-bottom {
+  background-color: #d9d9d9;
+  border-top: 1px solid #bcbcbc;
+  text-align: center;
+  padding: 15px 10px;
+  font-size: 14px;
+}
+
+.footer-bottom a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 900px) {
   footer {
-    background-color: #d9d9d9;
-    padding: 40px 60px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-links {
     gap: 40px;
   }
+}
 
-  /* ===== Left Section ===== */
-  .footer-left {
-    flex: 1 1 300px;
-    max-width: 350px;
+@media (max-width: 600px) {
+  footer {
+    padding: 30px 20px;
   }
 
-  .footer-left h2 {
-    font-family: 'Cursive';
-    font-size: 20px;
-    margin-bottom: 10px;
+  .footer-links {
+    flex-direction: column;
+    gap: 20px;
   }
 
-  .footer-left p {
-    margin: 5px 0;
-    color: rgb(0, 0, 0);
-    font-size: 1rem;
-    margin-bottom: 10px;
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    text-align: left;
-  }
-
-  .footer-left a {
-    color: #333;
-    text-decoration: none;
-  }
-
-  .social-icons {
-    margin-top: 10px;
-  }
-
-  .social-icons a {
-    margin-right: 10px;
-    text-decoration: none;
-    color: black;
-    font-size: 18px;
+  .footer-left, 
+  .footer-links {
+    max-width: 100%;
   }
 
   .footer-img img {
-    margin-top: 20px;
     width: 100%;
-    max-width: 250px;
-    border-radius: 5px;
+    max-width: none;
   }
 
-  /* ===== Right Section ===== */
-  .footer-links {
-    display: flex;               
-    align-items: flex-start;    
-    justify-content: flex-start; 
-    gap: 60px;                   
-  }
-  
-  
-  .footer-links ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .footer-links li {
-    margin-bottom: 10px;         
-  }
-
-  .fl1 li a{
-    display: block;
-  }
-  
-  .footer-links a {
-    text-decoration: none;
-    color: #000;
-    font-size: 15px;
-  }
-  
-  .footer-links a:hover {
-    text-decoration: underline;
-  }
-  
-
-  
-  
-  /* ===== Bottom Bar ===== */
   .footer-bottom {
-    background-color: #d9d9d9;
-    border-top: 1px solid #bcbcbc;
+    font-size: 12px;
+  }
+}
+
+
+
+/* GLOBAL TEXT RESPONSIVENESS */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 45px !important;
+  }
+
+  p {
+    font-size: 18px !important;
+  }
+
+  main {
+    margin-top: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 32px !important;
+    line-height: 1.2;
+  }
+
+  p {
+    font-size: 16px !important;
+  }
+
+  main {
+    margin-top: 120px;
+  }
+}
+
+/*HERO SECTION*/
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column;
     text-align: center;
-    padding: 15px 10px;
-    font-size: 14px;
   }
 
-  .footer-bottom a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: #333;
+  .hero-content h1,
+  .hero-content p,
+  .hero-list,
+  .hero-buttons {
+    text-align: center !important;
   }
 
-  /* ===== RESPONSIVE DESIGN ===== */
-  @media (max-width: 900px) {
-    footer {
-      flex-direction: column;
-      align-items: flex-start;
-    }
+  .hero-buttons {
+    justify-content: center;
+  }
+}
 
-    .footer-links {
-      gap: 40px;
-    }
+@media (max-width: 480px) {
+  .hero-image img {
+    max-height: 260px;
+  }
+}
+
+/* .card1 {
+  width: 100%;
+  flex-direction: column;
+}
+.card {
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .cards-container {
+    flex-direction: column;
   }
 
-  @media (max-width: 600px) {
-    footer {
-      padding: 30px 20px;
-    }
-
-    .footer-links {
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    .footer-left, 
-    .footer-links {
-      max-width: 100%;
-    }
-
-    .footer-img img {
-      width: 100%;
-      max-width: none;
-    }
-
-    .footer-bottom {
-      font-size: 12px;
-    }
+  .card1 {
+    width: 100%;
+    flex-direction: column;
   }
+
+  .card1-image {
+    width: 100%;
+    height: 250px;
+  }
+
+  .card1-content {
+    width: 100%;
+    text-align: center;
+  }
+
+  .card {
+    width: 100%;
+  }
+} */
+
+/* SKILLS SECTION*/
+
+/* DESKTOP (unchanged) — 3 columns */
+.cards-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: nowrap; /* keep original 3-column layout */
+}
+
+/* TABLET & MOBILE — stack vertically */
+@media (max-width: 900px) {
+  .cards-container {
+    flex-direction: column;   /* stack all cards */
+    flex-wrap: nowrap;
+  }
+
+  .card1,
+  .card {
+    width: 100%;              /* full width */
+    flex-direction: column;   /* put image above text */
+  }
+
+  .card1-image,
+  .card-image {
+    width: 100%;
+    height: 220px;            /* uniform height */
+  }
+
+  .card1-content,
+  .card-content {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+  }
+
+  /* Align buttons center */
+  .card1-content .btn,
+  .card-content .btn {
+    display: inline-block;
+    margin: 0 auto;
+  }
+}
+
+/* EXTRA SMALL SCREENS */
+@media (max-width: 480px) {
+  .card1-image,
+  .card-image {
+    height: 180px;
+  }
+}
+
+/*impact grid*/
+
+@media (max-width: 900px) {
+  .impact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card3,
+  .card4 {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+
+  .impact-card1 {
+    flex-direction: column;
+  }
+
+  .impact-card1 img {
+    height: 250px;
+  }
+}
+
+
+/*progress section*/
+@media (max-width: 900px) {
+  .measure-card-alignment {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .measure-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .progress {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .measure-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*change section*/
+@media (max-width: 900px) {
+  .change-card1 {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .change-card1-image {
+    width: 100%;
+    height: 250px;
+  }
+
+  .change-card1-content {
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .change-card1-content .hero-buttons {
+    justify-content: center;
+  }
+}
+
+
+/*footer*/
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    text-align: left;
+    gap: 20px;
+  }
+
+  footer ul {
+    width: 100%;
+  }
+}
+
+
+
+
+
