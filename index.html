@@ -19,10 +19,15 @@
                 <img src="" alt="logo" width="" height="">
                 <h1>One Touch ICT</h1>
             </div>
-        <nav>
+
+            <div class="hamburger" id="hamburger">
+              ☰
+          </div>
+
+        <nav id="nav-menu">
             <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">About</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
                 <li><a href="">Programs</a></li>
                 <li><a href="">Training</a></li>
             </ul>
@@ -326,6 +331,28 @@
         }
       }
     });
+
+
+  const hamburger = document.getElementById('hamburger');
+  const navMenu = document.getElementById('nav-menu');
+
+  // Toggle menu when hamburger is clicked
+  hamburger.addEventListener('click', (e) => {
+    e.stopPropagation();   // Prevent immediate closing
+    navMenu.classList.toggle('active');
+  });
+
+  // Prevent clicks inside the nav from closing it
+  navMenu.addEventListener('click', (e) => {
+    e.stopPropagation();
+  });
+
+  // Close menu when clicking anywhere else on the page
+  document.addEventListener('click', () => {
+    navMenu.classList.remove('active');
+  });
+
+
   </script>
 
 </body>

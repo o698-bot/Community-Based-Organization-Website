@@ -1,0 +1,130 @@
+body{
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+  }
+  
+  header {
+  position: fixed;       /* Fix it to the viewport */
+  top: 0;                /* Stick to the top */
+  left: 0;
+  width: 100%;           /* Full width */
+  background-color: #3cbe71; /* Add background so it doesn’t overlap content */
+  z-index: 1000;         /* Keep it above other elements */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional: nice subtle shadow */
+  }
+  
+  main {
+  margin-top: 200px; /* Adjust this to match your header height */
+  }
+  
+  header .container {
+    display: flex;
+    justify-content: space-between; /* logo left, nav right */
+    align-items: center;            /* vertically center both */
+  }
+  
+  /* Logo styling */
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* space between logo image and text */
+  }
+  .logo h1{
+    font-family: "Julius Sans One", sans-serif;
+    font-weight: 700;
+    text-align:;
+    font-size: 20px;
+    color: white;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  ul li a {
+    display: block;
+    color: rgb(0, 0, 0);
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  ul li a:hover {
+    background-color:white;
+  }
+  
+  @media (max-width: 768px) {
+    header .container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 10px;
+    }
+}
+
+/* Hide hamburger on large screens */
+.hamburger {
+    display: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  /* Small screens */
+  @media (max-width: 768px) {
+    /* Show hamburger */
+    .hamburger {
+      display: block;
+    }
+  
+    /* Hide nav by default */
+    nav {
+      width: 100%;
+      display: none;
+    }
+  
+    /* When active (JS toggles class) */
+    nav.active {
+      display: block;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+    }
+  
+    nav ul li a {
+      padding: 10px;
+      background: #ffffff50;
+      color: white;
+    }
+  
+    nav ul li a:hover {
+      background: white;
+      color: black;
+    }
+  
+    header .container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  
+  h1{
+    font-family: "Julius Sans One", sans-serif;
+    font-weight: 400;
+    text-align: center;
+    font-size: 90px;
+  }
+  
+  p{
+    text-align: center;
+    font-size: 25px;
+  }
