@@ -11,6 +11,7 @@ width: 100%;           /* Full width */
 background-color: #3cbe71; /* Add background so it doesn’t overlap content */
 z-index: 1000;         /* Keep it above other elements */
 box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional: nice subtle shadow */
+height:;
 }
 
 main {
@@ -28,6 +29,11 @@ header .container {
   display: flex;
   align-items: center;
   gap: 10px; /* space between logo image and text */
+}
+.logo img{
+  height: 100px;   /* control size */
+  width: auto;    /* keep proportions */
+  object-fit: contain;
 }
 .logo h1{
   font-family: "Julius Sans One", sans-serif;
