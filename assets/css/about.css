@@ -743,11 +743,16 @@ footer {
     grid-row: span 1;
   }
 
-  .impact-card1 {
+  .impact-card {
     flex-direction: column;
   }
 
-  .impact-card1 img {
+    .impact-card {
+    margin: 0;
+  }
+
+
+  .impact-card img {
     height: 250px;
   }
 }
@@ -757,11 +762,16 @@ footer {
 @media (max-width: 900px) {
   .measure-card-alignment {
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
   }
 
   .measure-grid {
     grid-template-columns: 1fr;
+    padding: 5px;
+    margin: 0%;
+  }
+  .measure-card{
+    margin: 0;
   }
 
   .progress {
