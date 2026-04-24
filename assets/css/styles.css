@@ -1,28 +1,68 @@
+
+
 body{
   font-family: 'Lato', sans-serif;
   font-weight: 400;
+    
 }
-
 header {
-position: fixed;       /* Fix it to the viewport */
-top: 0;                /* Stick to the top */
-left: 0;
-width: 100%;           /* Full width */
-background-color: #3cbe71; /* Add background so it doesn’t overlap content */
-z-index: 1000;         /* Keep it above other elements */
-box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional: nice subtle shadow */
-height:;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: #3cbe71;
+  overflow-x: hidden;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
-
-main {
-margin-top: 200px; /* Adjust this to match your header height */
-}
-
 header .container {
   display: flex;
-  justify-content: space-between; /* logo left, nav right */
-  align-items: center;            /* vertically center both */
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  max-width: 100%;
+  padding: 10px 15px;
+
+  box-sizing: border-box;
+  min-width: 0; /* IMPORTANT */
 }
+.logo h1 {
+  font-size: 18px;
+  white-space: nowrap;
+}
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+/* header {
+position: fixed; 
+top: 0;                
+left: 0;
+width: 100%;     
+background-color: #3cbe71;
+z-index: 1000;         
+box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+overflow-x: hidden;
+
+}  */
+
+main {
+margin-top: 200px;
+}
+
+/* header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;            
+    max-width: 100%;
+
+} */
 
 /* Logo styling */
 .logo {
