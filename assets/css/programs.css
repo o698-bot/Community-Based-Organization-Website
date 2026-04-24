@@ -503,3 +503,151 @@ footer {
   text-decoration: none;
   color: #333;
 }
+
+
+/* GLOBAL TEXT RESPONSIVENESS */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 45px !important;
+  }
+
+  p {
+    font-size: 18px !important;
+  }
+
+  main {
+    margin-top: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 32px !important;
+    line-height: 1.2;
+  }
+
+  p {
+    font-size: 16px !important;
+  }
+
+  main {
+    margin-top: 120px;
+  }
+}
+
+/* DESKTOP (unchanged) — 3 columns */
+.cards-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: nowrap; /* keep original 3-column layout */
+}
+
+/* TABLET & MOBILE — stack vertically */
+@media (max-width: 900px) {
+  .cards-container {
+    flex-direction: column;   /* stack all cards */
+    flex-wrap: nowrap;
+  }
+
+  .card1,
+  .card {
+    width: 100%;              /* full width */
+    flex-direction: column;   /* put image above text */
+  }
+
+  .card1-image,
+  .card-image {
+    width: 100%;
+    height: 220px;            /* uniform height */
+  }
+
+  .card1-content,
+  .card-content {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+  }
+
+  /* Align buttons center */
+  .card1-content .btn,
+  .card-content .btn {
+    display: inline-block;
+    margin: 0 auto;
+  }
+}
+
+/* EXTRA SMALL SCREENS */
+@media (max-width: 480px) {
+  .card1-image,
+  .card-image {
+    height: 180px;
+  }
+}
+
+/*impact grid*/
+
+@media (max-width: 900px) {
+  .impact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card3,
+  .card4 {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+
+  .impact-card1 {
+    flex-direction: column;
+  }
+
+  .impact-card1 img {
+    height: 250px;
+  }
+}
+
+
+/*progress section*/
+@media (max-width: 900px) {
+  .measure-card-alignment {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .measure-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .progress {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .measure-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*change section*/
+@media (max-width: 900px) {
+  .change-card1 {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .change-card1-image {
+    width: 100%;
+    height: 250px;
+  }
+
+  .change-card1-content {
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .change-card1-content .hero-buttons {
+    justify-content: center;
+  }
+}

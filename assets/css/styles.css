@@ -177,7 +177,7 @@ p{
   gap: 15px; 
 }
 
-.hero-img{
+/* .hero-img{
   margin-top: 100px;
   text-align: center;
   padding: 50px;
@@ -187,7 +187,29 @@ p{
     width: 83%;
     height: auto;
   border-radius: 20px;
+} */
+.hero-img img {
+  width: 100%;     /* fills container */
+  height: auto;    /* keeps aspect ratio */
+  display: block;  /* removes extra space below image */
+  border-radius:20px ;
+
 }
+
+
+.hero-img {
+  margin-top: 10%;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  
+}
+@media (max-width: 768px) {
+  .hero-img img {
+    height: 200px; /* smaller for phones */
+  }
+}
+
 
 .hero-section {
   padding: 60px 10%;
@@ -202,21 +224,62 @@ p{
   flex-wrap: wrap; /* responsive for small screens */
 }
 
+
 .hero-image {
   flex: 1 1 45%;
+    width: 100%;
+  /* height: 250px;        same feel as others */
+  overflow: hidden;
+  border-radius: 12px;
 }
+.hero-content {
+  flex: 1 1 50%;
+}
+
+
+
 
 .hero-image img {
   width: 100%;
-  height: auto;
+  height: 100%;
   border-radius: 12px;
   object-fit: cover;
   max-height: 420px;
 }
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column;   /* stack image + text */
+    text-align: center;
+  }
 
-.hero-content {
-  flex: 1 1 50%;
+  .hero-image,
+  .hero-content {
+    flex: 1 1 100%;           /* full width */
+  }
+
+  .hero-image img {
+    max-height: 250px;        /* reduce height on phone */
+  }
+
+  .hero-buttons {
+    justify-content: center;  /* center buttons */
+  }
 }
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 40px 20px; /* reduce side padding */
+  }
+
+  .hero-content h1 {
+    font-size: 24px; /* prevent oversized text */
+  }
+
+  .hero-content p {
+    font-size: 14px;
+  }
+}
+
+
 
 .subheading {
   color: rgb(0, 0, 0);
@@ -862,7 +925,7 @@ margin-top: 20%;
 
 .change-card1-image img {
   width: 100%;
-  height: 100%;
+  height: 390px;
   object-fit: cover;
 }
 .change-card1-image{
@@ -1093,40 +1156,7 @@ footer {
   }
 }
 
-/* .card1 {
-  width: 100%;
-  flex-direction: column;
-}
-.card {
-  width: 100%;
-}
 
-@media (max-width: 900px) {
-  .cards-container {
-    flex-direction: column;
-  }
-
-  .card1 {
-    width: 100%;
-    flex-direction: column;
-  }
-
-  .card1-image {
-    width: 100%;
-    height: 250px;
-  }
-
-  .card1-content {
-    width: 100%;
-    text-align: center;
-  }
-
-  .card {
-    width: 100%;
-  }
-} */
-
-/* SKILLS SECTION*/
 
 /* DESKTOP (unchanged) — 3 columns */
 .cards-container {
@@ -1146,20 +1176,46 @@ footer {
   .card {
     width: 100%;              /* full width */
     flex-direction: column;   /* put image above text */
+      height: auto;        /* allow content to expand */
+  overflow: hidden;    /* prevent weird overflow */
+  border-radius: 12px;
   }
 
   .card1-image,
   .card-image {
     width: 100%;
     height: 220px;            /* uniform height */
+
+  height: 100%;
+  object-fit: cover;   /* prevents distortion + fills space */
+  display: block;
   }
 
-  .card1-content,
   .card-content {
     width: 100%;
     text-align: center;
     padding: 20px;
   }
+  .card1-content {
+  padding: 20px;       /* this adds space on the left */
+}
+
+  .card1-content h2,
+.card-content h2 {
+  font-size: 20px;
+  line-height: 1.3;
+}
+
+  
+  .card1h3 {
+    margin-top: 20px; /* mobile fix */
+    margin: 0;
+  }
+
+.card1-content p,
+.card-content p {
+  font-size: 14px;
+}
 
   /* Align buttons center */
   .card1-content .btn,
@@ -1231,14 +1287,23 @@ footer {
 
   .change-card1-image {
     width: 100%;
-    height: 250px;
+    height: 100%;
   }
 
   .change-card1-content {
     width: 100%;
     margin-top: 20px;
-    text-align: center;
+    padding: 5px;
+    text-align: left;
   }
+
+    .change-card1-content h2{
+  font-size: 20px;
+  line-height: 1.3;
+}
+.change-card1-content p{
+  font-size: 14px;
+}
 
   .change-card1-content .hero-buttons {
     justify-content: center;
