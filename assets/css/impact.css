@@ -596,9 +596,9 @@ footer {
   p {
     font-size: 18px !important;
   }
-  .card-content p{
+  /* .card-content p{
     font-size: 8px !important;
-  }
+  } */
 
   main {
     margin-top: 150px;
@@ -653,8 +653,8 @@ footer {
   .card1-content,
   .card-content {
     width: 100%;
-    text-align: center;
-    padding: 20px;
+    text-align: left;
+    padding: 1px;
   }
 
   /* Align buttons center */
