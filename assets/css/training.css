@@ -586,8 +586,7 @@ footer {
 @media (max-width: 900px) {
   .change-card1 {
     flex-direction: column;
-    height: auto;
-    
+    height: 100%;
   }
 
     .change-card1-content h2{
@@ -615,5 +614,29 @@ footer {
 
   .change-card1-content .hero-buttons {
     justify-content: center;
+  }
+}
+/*HERO SECTION*/
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-content h1,
+  .hero-content p,
+  .hero-list,
+  .hero-buttons {
+    text-align: center !important;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-image img {
+    max-height: 260px;
   }
 }
