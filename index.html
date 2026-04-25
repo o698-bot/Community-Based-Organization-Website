@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 </head>
 <body>
     <header>
@@ -18,7 +20,7 @@
 
             <div class="logo">
                 <!-- <img src="assets/images/one touch ict.png" alt="logo" > -->
-                <h1>One Touch ICT</h1>
+                <a href="index.html" class="logo-link"><h1>One Touch ICT</h1></a>
             </div>
 
             <div class="hamburger" id="hamburger">
@@ -42,7 +44,7 @@
         <p>We transform lives by providing technical training to youth and women. Our mission is simple: give people tools to build their own future.</p>
         
     <div class="btn-container">
-        <button class="button1">Explore programs</button>
+        <button class="button1" onclick="document.location='programs.html'">Explore programs</button>
         <button class="button">Donate now</button>
     </div>
 
@@ -71,7 +73,7 @@
             </ul>
       
             <div class="hero-buttons">
-              <a href="#" class="btn primary">Learn more</a>
+              <a href="#" class="btn primary" onclick="document.location='programs.html'">Learn more</a>
               <a href="#" class="btn secondary">Watch video →</a>
             </div>
           </div>
@@ -90,7 +92,7 @@
                     <h4 class="card1h3">Learn</h4>
                     <h2>Comprehensive<br> Training Across<br>Key Industries</h2>
                     <p>Empowering <br>individuals with practical workplace skills</p>
-                    <a href="#" class="btn primary">Explore →</a>
+                    <a href="programs.html" class="btn primary">Explore →</a>
                 </div>
                 <div class="card1-image">
                   <img src="assets/images/pic4.jpg" alt="Comprehensive training">
@@ -117,7 +119,7 @@
                   <h3>Craft</h3>
                   <h2>Tailoring and Dressmaking</h2>
                   <p>Design professional garments with precision and creativity</p>
-                  <a href="#" class="btn primary">Learn →</a>
+                  <a href="programs.html" class="btn primary">Learn →</a>
                 </div>
               </div>
           
@@ -129,7 +131,7 @@
                   <h3>Tech</h3>
                   <h2>Computer Literacy and ICT</h2>
                   <p>Master digital skills for modern workplace success</p>
-                  <a href="#" class="btn primary">Discover →</a>
+                  <a href="programs.html" class="btn primary">Discover →</a>
                 </div>
               </div>
             </div>
@@ -151,7 +153,7 @@
             <div class="impact-card-content">
               <h3>Opportunities<br> for Youth</h3>
               <p>Breaking barriers of unemployment through practical training</p>
-              <a href="#">Explore →</a>
+              <a href="impact.html">Explore →</a>
             </div>
           </div>
       
@@ -159,7 +161,7 @@
             <div class="impact-card-content">
               <h3>Support for<br> Women</h3>
               <p>Creating economic independence through specialized skills</p>
-              <a href="#">Learn →</a>
+              <a href="impact.html">Learn →</a>
             </div>
           </div>
           
@@ -174,7 +176,7 @@
               <p class="impact-subheading" style="margin-top:5%;margin-bottom:0%;">Community</p>
               <h3>Supporting<br> Vulnerable and<br> Marginalized<br> Groups</h3>
               <p>Building resilience through targeted skill development</p>
-              <a href="#">Connect →</a>
+              <a href="impact.html">Connect →</a>
             </div>
           </div>
 
@@ -189,7 +191,7 @@
               <p class="impact-subheading" >Access</p>
               <h3 style="margin-top: 0%;margin-bottom:5%;">Empowering<br> Persons with<br> Disabilities</h3>
               <p>Inclusive training programs that unlock potential</p>
-              <a href="#" style="font-weight:600;">Discover →</a>
+              <a href="impact.html" style="font-weight:600;">Discover →</a>
             </div>
 
           </div>
@@ -197,14 +199,16 @@
         </div>
       </section>
 
-      <section class="partners-carousel">
+      <section class="partners-carousel" id="p1">
         <h3>TRUSTED BY LEADING ORGANIZATION SUPPORTING COMMUNITY<br> DEVELOPMENT</h3>
           <div class="swiper-container">
             <div class="swiper-wrapper">
               <div class="swiper-slide"><img src="assets/images/nita.png" alt="NITA"></div>
               <div class="swiper-slide"><img src="assets/images/knec.png" alt="KNEC"></div>
+              <div class="swiper-slide"><img src="assets/images/drc2.png" alt="TVET"></div>
               <div class="swiper-slide"><img src="assets/images/tvet.png" alt="TVET"></div>
               <div class="swiper-slide"><img src="assets/images/gok.png" alt="TVET"></div>
+              <div class="swiper-slide"><img src="assets/images/city.png" alt="TVET"></div>
             </div>
           </div>
         </section>
@@ -217,7 +221,7 @@
             <p>One Touch ICT has created meaningful change through<br> dedicated skills training and community support </p>
             <div class="hero-buttons" style="margin-bottom:10%">
               <a href="#" class="btn primary">Donate</a>
-              <a href="#" class="btn secondary" >Learn →</a>
+              <a href="impact.html" class="btn secondary" >Learn →</a>
             </div>
           </div>
       
@@ -274,42 +278,41 @@
           </div>
         </section>
 
-        <footer>
+        <footer id="f">
           <div class="footer-left">
-            <h2>Logo</h2>
-            <p><strong>Address</strong><br>Community Center, Nairobi, Kenya</p>
-            <p><strong>Contact</strong><br>+254 712 345 678<br><a href="mailto:info@onetouchict.org">info@onetouchict.org</a></p>
+            <img src="" alt="">
+            <p><strong>Address</strong><br>Mathare slums along Juja Road,Nairobi, Kenya</p>
+            <p><strong>Contact</strong><br>+254 714 235 722<br><a href="mailto:info@onetouchict.org">info@onetouchict.org</a></p>
             
             <div class="social-icons">
-              <a href="#">🌐</a>
-              <a href="#">📘</a>
-              <a href="#">📸</a>
-              <a href="#">▶️</a>
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
             </div>
         
             <div class="footer-img">
-              <img src="assets/images/pic9.jpg" alt="footer image">
+              <img src="assets/images/one touch ict logo.png" alt="footer image">
             </div>
           </div>
         
           <div class="footer-links">
             
               <ul style="display: block;">
-                <li><a href="#">Home</a></li>
-                <li><a href="#" >Programs</a></li>
-                <li><a href="#">Training</a></li>
-                <li><a href="#" >Impact</a></li>
-                <li><a href="#" >About</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="programs.html" >Programs</a></li>
+                <li><a href="training.html">Training</a></li>
+                <li><a href="impact.html" >Impact</a></li>
+                <li><a href="about.html" >About</a></li>
               </ul>
             
             
             
               <ul style="display:block ;">
                 <li><a href="#">Donate</a></li>
-                <li><a href="#">Partners</a></li>
+                <li><a href="#p1">Partners</a></li>
                 <li><a href="#">Resources</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="impact.html">Blog</a></li>
+                <li><a href="#f1">Contact</a></li>
               </ul>
             
           </div>

@@ -32,6 +32,15 @@ header .container {
   font-size: 18px;
   white-space: nowrap;
 }
+  .logo-link {
+  text-decoration: none;
+  color: inherit; /* keeps your original text color */
+}
+
+.logo-link h1 {
+  margin: 0; /* prevents spacing issues */
+}
+
 nav ul {
   display: flex;
   flex-wrap: wrap;
@@ -1131,6 +1140,10 @@ footer {
 
   .footer-img img {
     width: 100%;
+    max-width: none;
+  }
+  .footer-left img{
+        width: 100%;
     max-width: none;
   }
 
