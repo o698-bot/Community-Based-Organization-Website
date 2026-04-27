@@ -1,3 +1,45 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Lato', sans-serif; background: #f0f0f0; }
+
+.label {
+  background: #111;
+  color: #fff;
+  font-family: 'Lato', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 10px 20px;
+}
+
+.hero { position: relative; width: 100%; min-height: 92vh; overflow: hidden; display: flex; }
+.hero__bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
+.hero__content { position: relative; z-index: 2; }
+
+
+.v8 { align-items: center; justify-content: flex-end; }
+.v8::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to left, rgba(255,255,255,0.94) 0%, rgba(255,255,255,0.75) 42%, rgba(255,255,255,0.0) 70%); z-index: 1; }
+.v8 .hero__bg { object-position: left center; }
+.v8 .hero__content { padding: 80px 8% 80px; max-width: 560px; text-align: right; }
+.v8 .eyebrow { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #2a7d2e; margin-bottom: 14px; display: block; }
+.v8 h1 {
+   font-size: clamp(2.5rem,5vw,4.8rem); 
+   font-weight: 600;
+    line-height: 1.05; 
+    color: #111;
+     margin-bottom: 18px; 
+    font-family: "Julius Sans One", sans-serif;
+    text-align: center;
+}
+    
+.v8 p { font-size: 0.95rem; color: #444; margin-bottom: 32px; line-height: 1.8; }
+.v8 .btns { display: flex; gap: 14px; justify-content: flex-end; flex-wrap: wrap; }
+.v8 .b1 { background: #111; color: #fff; padding: 13px 28px; border-radius: 3px; text-decoration: none; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.06em; text-transform: uppercase; }
+.v8 .b2 { color: #111; padding: 13px 0; text-decoration: none; font-size: 0.85rem; border-bottom: 1.5px solid #111; letter-spacing: 0.06em; text-transform: uppercase; }
+
+
+
+
 body{
     font-family: 'Lato', sans-serif;
     font-weight: 400;
@@ -14,7 +56,7 @@ body{
   }
   
   main {
-  margin-top: 200px; /* Adjust this to match your header height */
+  margin-top:0; /* Adjust this to match your header height */
   }
   
   header .container {
@@ -523,7 +565,7 @@ footer {
   }
 
   main {
-    margin-top: 150px;
+    margin-top:0;
   }
 }
 
@@ -538,7 +580,7 @@ footer {
   }
 
   main {
-    margin-top: 120px;
+    margin-top:0;
   }
 }
 
