@@ -1,3 +1,102 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Lato', sans-serif; background: #f0f0f0; }
+
+.label {
+  background: #111;
+  color: #fff;
+  font-family: 'Lato', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 10px 20px;
+}
+
+/* ===================== SHARED HERO BASE ===================== */
+.hero { position: relative; width: 100%; min-height: 92vh; overflow: hidden; display: flex; }
+.hero__bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
+
+
+.v7 { align-items: center; }
+.v7::after { content: ''; position: absolute; inset: 0; background: rgba(10,20,10,0.82); z-index: 1; }
+.v7 .hero__content { padding: 80px 8%; max-width: 700px; border-left: 3px solid #3cbe71; margin-left: 8%; padding-left: 40px;position: relative;z-index: 2; }
+.v7 .eyebrow { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #3cbe71; margin-bottom: 20px; display: block; }
+.v7 h1 { 
+  font-size: clamp(2.2rem,5vw,4.5rem); 
+  font-weight: 700; 
+  line-height: 1.05; 
+  color: #fff;
+   margin-bottom: 20px;
+    letter-spacing: -0.02em;
+    font-family: "Julius Sans One", sans-serif;
+    text-align: left;
+  }
+
+
+.v7 p { font-size: 1rem; color: rgba(255,255,255,0.7); max-width: 480px; margin-bottom: 36px; line-height: 1.75; }
+.v7 .btns { display: flex; gap: 14px; flex-wrap: wrap; }
+.v7 .b1 { background: #3cbe71; color: #fff; padding: 13px 30px; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 0.88rem; }
+.v7 .b2 { border: 1.5px solid rgba(255,255,255,0.35); color: rgba(255,255,255,0.85); padding: 12px 28px; border-radius: 50px; text-decoration: none; font-size: 0.88rem; }
+
+
+@media (max-width: 768px) {
+  .hero { min-height: 100svh; }
+
+  .v1 .hero__content, .v2 .hero__content, .v4 .hero__content,
+  .v7 .hero__content, .v8 .hero__content, .v10 .hero__content { padding: 40px 24px 50px; max-width: 100%; }
+
+  .v1::after { background: linear-gradient(to top, rgba(255,255,255,0.97) 0%, rgba(255,255,255,0.88) 50%, rgba(255,255,255,0.3) 80%, transparent 100%); }
+  .v1 { align-items: flex-end; }
+  .v1 p { max-width: 100%; }
+
+  .v2 { align-items: flex-end; }
+  .v2 .hero__content { padding: 0 24px 50px; }
+
+  .v3 { flex-direction: column; }
+  .v3 .hero__bg { width: 100%; height: 50%; top: 0; right: 0; }
+  .v3 .hero__overlay { display: none; }
+  .v3 .hero__content { width: 100%; padding: 40px 24px; }
+
+  .v4 .hero__content { padding: 40px 24px; }
+
+  .v5 .v5-text { padding: 0 24px 24px; }
+  .v5-stats { flex-direction: column; }
+  .v5-stat { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.15); padding: 14px 24px; }
+
+  .v6 .hero__content { flex-direction: column; }
+  .v6-left { width: 100%; clip-path: none; padding: 40px 24px; }
+  .v6-right { position: relative; width: 100%; height: 280px; }
+
+  .v7 .hero__content { margin-left: 0; padding: 40px 24px 40px 28px; }
+
+  .v8 { align-items: flex-end; justify-content: flex-start; }
+  .v8::after { background: linear-gradient(to top, rgba(255,255,255,0.97) 0%, rgba(255,255,255,0.88) 50%, rgba(255,255,255,0.2) 100%); }
+  .v8 .hero__content { text-align: left; padding: 0 24px 50px; }
+  .v8 .btns { justify-content: flex-start; }
+
+  .v9 { flex-direction: column; }
+  .v9 .hero__bg { width: 100%; height: 40%; top: 0; right: 0; }
+  .v9::after { width: 100%; height: 40%; top: 0; }
+  .v9 .hero__content { width: 100%; border-right: none; border-top: none; padding: 40% 24px 40px; margin-top: 0; }
+
+  .v10 { align-items: flex-end; }
+  .v10 .hero__content { padding: 0 24px 50px; }
+
+  .btns { flex-direction: column !important; }
+  .btns a { text-align: center !important; width: 100%; }
+}
+
+@media (max-width: 480px) {
+  .v5-stats { display: grid; grid-template-columns: 1fr 1fr; }
+  .v5-stat { border-right: 1px solid rgba(255,255,255,0.15); }
+  .v5-stat:nth-child(2n) { border-right: none; }
+}
+
+
+
+
+
+
 body{
     font-family: 'Lato', sans-serif;
     font-weight: 400;
@@ -14,7 +113,7 @@ body{
   }
   
   main {
-  margin-top: 200px; /* Adjust this to match your header height */
+  margin-top: 0; /* Adjust this to match your header height */
   }
   
   header .container {
@@ -477,7 +576,7 @@ footer {
   }
 
   main {
-    margin-top: 150px;
+    margin-top: 0;
   }
 }
 
@@ -492,7 +591,7 @@ footer {
   }
 
   main {
-    margin-top: 120px;
+    margin-top: 0;
   }
 }
 
