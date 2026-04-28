@@ -14,33 +14,61 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-                <div class="logo">
-                    <!-- <img src="" alt="logo" width="" height=""> -->
-                    <a href="index.html" class="logo-link"><h1>One Touch ICT</h1></a>
-                </div>
 
-                <div class="hamburger" id="hamburger">
-                    ☰
-                </div>
-            <nav id="nav-menu">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="programs.html">Programs</a></li>
-                    <li><a href="training.html">Training</a></li>
-                    <li><a href="impact.html">Impact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+
+
+
+
+
+
+
+
+
+
+<header>
+  <div class="container">
+    <div class="logo">
+      <a href="index.html" class="logo-link"><h1>One Touch ICT</h1></a>
+    </div>
+
+    <div class="hamburger" id="hamburger">☰</div>
+
+    <nav id="nav-menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+
+        <!-- Programs with dropdown -->
+        <li class="nav-dropdown">
+          <a href="programs.html" class="nav-dropdown__trigger">
+            Programs <span class="nav-dropdown__arrow">▾</span>
+          </a>
+          <ul class="nav-dropdown__menu">
+            <li><a href="programs.html#vocational">Vocational skills training program</a></li>
+            <li><a href="programs.html#livelihood">Women empowerment program</a></li>
+            <li><a href="programs.html#mentorship">Mental Health & Psychosocial<br>Support Program</a></li>
+            <li><a href="programs.html#csr">Community Social Protection<br>Outreach Program</a></li>
+            <li><a href="programs.html#talent">Community economic & financial<br>inclusion empowerment program</a></li>
+          </ul>
+        </li>
+
+        <li><a href="training.html">Training</a></li>
+
+        
+        <li>
+          <a href="impact.html">Impact </a>
+        </li>
+
+      </ul>
+    </nav>
+  </div>
+</header>
 
     <main>
 
 
 <section class="hero v8">
-  <img class="hero__bg" src="assets/images/program.jpg" alt="">
+  <img class="hero__bg" src="assets/images/w4.jpg" alt="">
   <div class="hero__content">
     <span class="eyebrow">Our Mission</span>
     <h1>PATHWAYS TO<br>POSSIBILITY</h1>
@@ -52,7 +80,7 @@
   </div>
 </section>
 
-        <section class="hero-section">
+        <!-- <section class="hero-section">
         <div class="hero-container">
 
       
@@ -91,8 +119,8 @@
                 <h2>UNDERSTANDING<br>MONEY AND MARKETS</h2>
                 <p>Entrepreneurship training gives participants the tools to start small businesses and manage them well. Financial literacy removes the mystery from money and builds confidence in economic decisions.</p>
                 <div class="hero-buttons">
-                  <!-- <a href="#" class="btn primary">Volunteer</a>
-                  <a href="#" class="btn secondary">Donate</a> -->
+                  <a href="#" class="btn primary">Volunteer</a>
+                  <a href="#" class="btn secondary">Donate</a>
                 </div>
             </div>
 
@@ -141,15 +169,15 @@
                 <h2>PARTNERSHIPS WITH LOCAL INDUSTRIES AND TVET COLLEGES</h2>
                 <p>Mentorship and apprenticeship programs that lead to employment</p>
                 <div class="hero-buttons">
-                  <!-- <a href="#" class="btn primary">Volunteer</a>
-                  <a href="#" class="btn secondary">Donate</a> -->
+                  <a href="#" class="btn primary">Volunteer</a>
+                  <a href="#" class="btn secondary">Donate</a>
                 </div>
             </div>
 
           </div>
 
           </div>
-        </section>
+        </section> -->
 
         <section class="join">
         <div class="join-text">
@@ -169,7 +197,7 @@
      <footer>
           <div class="footer-left">
             <p><strong>Address</strong><br>Mathare slums along Juja Road,Nairobi, Kenya</p>
-            <p><strong>Contact</strong><br>+254 714 235 722<br><a href="mailto:info@onetouchict.org">info@onetouchict.org</a></p>
+            <p><strong>Contact</strong><br>+254 702 369 598<br><a href="mailto:info@onetouchict.org">info@onetouchict.org</a></p>
             
             <div class="social-icons">
               <a href="#"><i class="fa-brands fa-facebook"></i></a>
@@ -244,6 +272,19 @@
         document.addEventListener('click', () => {
           navMenu.classList.remove('active');
         });
+
+
+        // Dropdown toggle on mobile tap
+document.querySelectorAll('.nav-dropdown__trigger').forEach(trigger => {
+  trigger.addEventListener('click', (e) => {
+    const isMobile = window.innerWidth <= 768;
+    if (isMobile) {
+      e.preventDefault();
+      const parent = trigger.closest('.nav-dropdown');
+      parent.classList.toggle('open');
+    }
+  });
+});
       </script>
 </body>
 </html>

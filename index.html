@@ -17,28 +17,44 @@
 
 </head>
 <body>
-    <header>
-        <div class="container">
+<header>
+  <div class="container">
+    <div class="logo">
+      <a href="index.html" class="logo-link"><h1>One Touch ICT</h1></a>
+    </div>
 
-            <div class="logo">
-                <a href="index.html" class="logo-link"><h1>One Touch ICT</h1></a>
-            </div>
+    <div class="hamburger" id="hamburger">☰</div>
 
-            <div class="hamburger" id="hamburger">
-              ☰
-          </div>
+    <nav id="nav-menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
 
-        <nav id="nav-menu">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="programs.html">Programs</a></li>
-                <li><a href="training.html">Training</a></li>
-                <li><a href="impact.html">Impact</a></li>
-            </ul>
-        </nav>
-        </div>
-    </header>
+        <!-- Programs with dropdown -->
+        <li class="nav-dropdown">
+          <a href="programs.html" class="nav-dropdown__trigger">
+            Programs <span class="nav-dropdown__arrow">▾</span>
+          </a>
+          <ul class="nav-dropdown__menu">
+            <li><a href="programs.html#vocational">Vocational skills training program</a></li>
+            <li><a href="programs.html#livelihood">Women empowerment program</a></li>
+            <li><a href="programs.html#mentorship">Mental Health & Psychosocial<br>Support Program</a></li>
+            <li><a href="programs.html#csr">Community Social Protection<br>Outreach Program</a></li>
+            <li><a href="programs.html#talent">Community economic & financial<br>inclusion empowerment program</a></li>
+          </ul>
+        </li>
+
+        <li><a href="training.html">Training</a></li>
+
+        
+        <li>
+          <a href="impact.html">Impact </a>
+        </li>
+
+      </ul>
+    </nav>
+  </div>
+</header>
 
     <main >
 <section class="hero-fullbleed">
@@ -46,7 +62,7 @@
     <!-- Background image — sits behind everything -->
     <img
         class="hero-fullbleed__bg"
-        src="assets/images/needy2.jpg"
+        src="assets/images/pic1.jpg"
         alt="Community empowerment"
     >
 
@@ -120,7 +136,7 @@
                     <a href="programs.html" class="btn primary">Explore →</a>
                 </div>
                 <div class="card1-image">
-                  <img src="assets/images/pic4.jpg" alt="Comprehensive training">
+                  <img src="assets/images/woman.jpg" alt="Comprehensive training">
                 </div>
               </div>
 
@@ -229,6 +245,7 @@
           <div class="swiper-container">
             <div class="swiper-wrapper">
               <div class="swiper-slide"><img src="assets/images/nita.png" alt="NITA"></div>
+              <div class="swiper-slide"><img src="assets/images/hias.png" alt="HIAS"></div>
               <div class="swiper-slide"><img src="assets/images/knec.png" alt="KNEC"></div>
               <div class="swiper-slide"><img src="assets/images/drc2.png" alt="TVET"></div>
               <div class="swiper-slide"><img src="assets/images/tvet.png" alt="TVET"></div>
@@ -298,7 +315,7 @@
                 </div>
             </div>
             <div class="change-card1-image">
-              <img src="assets/images/change.jpg" alt="Comprehensive training">
+              <img src="assets/images/w1.jpg" alt="Comprehensive training">
             </div>
           </div>
         </section>
@@ -307,7 +324,7 @@
           <div class="footer-left">
             <img src="" alt="">
             <p><strong>Address</strong><br>Mathare slums along Juja Road,Nairobi, Kenya</p>
-            <p><strong>Contact</strong><br>+254 714 235 722<br><a href="mailto:info@onetouchict.org">info@onetouchict.org</a></p>
+            <p><strong>Contact</strong><br>+254 702 369 598<br><a href="mailto:info@onetouchict.org">info@onetouchict.org</a></p>
             
             <div class="social-icons">
               <a href="#"><i class="fa-brands fa-facebook"></i></a>
@@ -397,6 +414,18 @@
   document.addEventListener('click', () => {
     navMenu.classList.remove('active');
   });
+
+  // Dropdown toggle on mobile tap
+document.querySelectorAll('.nav-dropdown__trigger').forEach(trigger => {
+  trigger.addEventListener('click', (e) => {
+    const isMobile = window.innerWidth <= 768;
+    if (isMobile) {
+      e.preventDefault();
+      const parent = trigger.closest('.nav-dropdown');
+      parent.classList.toggle('open');
+    }
+  });
+});
 
 
   </script>

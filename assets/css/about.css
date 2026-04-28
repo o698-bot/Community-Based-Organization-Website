@@ -108,7 +108,7 @@ html, body {
 }
 
 .mission-split__text h2 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Julius Sans One', sans-serif;
   font-size: clamp(1.8rem, 3vw, 2.8rem);
   font-weight: 700;
   color: #1a1a2e;
@@ -998,3 +998,280 @@ footer {
 }
 }
 
+
+
+/*board*/
+
+.bod-section {
+  padding: 80px 8%;
+  background: linear-gradient(160deg, #f0faf3 0%, #e6f5ea 50%, #f7fdf8 100%);
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Subtle decorative circle in background */
+.bod-section::before {
+  content: '';
+  position: absolute;
+  top: -120px;
+  right: -120px;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(60,190,113,0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.bod-header {
+  margin-bottom: 48px;
+}
+
+.bod-eyebrow {
+  display: block;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #2a7d2e;
+  margin-bottom: 10px;
+}
+
+.bod-title {
+  font-family: 'Julius Sans One', sans-serif;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 400;
+  color: #1a1a1a;
+  text-align: left;
+  margin-bottom: 14px;
+  letter-spacing: 0.01em;
+}
+
+.bod-title-line {
+  width: 56px;
+  height: 3px;
+  background: #2a7d2e;
+  border-radius: 2px;
+}
+
+/* Grid — 4 columns on desktop, 5th card spans full */
+.bod-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.bod-card--wide {
+  grid-column: 1 / -1; /* full width on last card */
+  max-width: 340px;    /* but constrained so it doesn't look odd */
+}
+
+/* Card */
+.bod-card {
+  background: #fff;
+  border: 1px solid rgba(42,125,46,0.15);
+  border-radius: 12px;
+  padding: 28px 24px 24px;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.bod-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(42,125,46,0.12);
+}
+
+/* Green accent bar on hover */
+.bod-card__accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(to right, #2a7d2e, #3cbe71);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.bod-card:hover .bod-card__accent {
+  transform: scaleX(1);
+}
+
+/* Index number — large faded */
+.bod-card__index {
+  font-family: 'Julius Sans One', sans-serif;
+  font-size: 2.8rem;
+  font-weight: 400;
+  color: rgba(42,125,46,0.1);
+  line-height: 1;
+  margin-bottom: 12px;
+  letter-spacing: -0.02em;
+}
+
+.bod-card__name {
+  font-family: 'Lato', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 4px;
+  text-align: left;
+  line-height: 1.3;
+}
+
+.bod-card__role {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #2a7d2e;
+  margin-bottom: 12px;
+  text-align: left;
+}
+
+.bod-card__bio {
+  font-family: 'Lato', sans-serif;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.65;
+  font-style: italic;
+  text-align: left;
+}
+
+/* =======================================================
+   RESPONSIVE
+   ======================================================= */
+
+@media (max-width: 1024px) {
+  .bod-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .bod-card--wide {
+    grid-column: span 1;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .bod-section {
+    padding: 50px 24px;
+  }
+  .bod-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .bod-card--wide {
+    grid-column: span 1;
+    max-width: 100%;
+  }
+  .bod-card {
+    padding: 22px 20px;
+  }
+}
+
+
+/*program dropdown*/
+/* ===================== DROPDOWN NAV ===================== */
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown__trigger {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.nav-dropdown__arrow {
+  font-size: 0.7rem;
+  transition: transform 0.2s ease;
+  display: inline-block;
+}
+
+.nav-dropdown__menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  min-width: 260px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  border-radius: 0 0 8px 8px;
+  border-top: 3px solid #2a7d2e;
+  z-index: 2000;
+  flex-direction: column;
+  padding: 6px 0;
+}
+
+.nav-dropdown__menu li {
+  width: 100%;
+}
+
+.nav-dropdown__menu li a {
+  display: block;
+  padding: 12px 20px;
+  color: #111;
+  font-size: 0.88rem;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  white-space: nowrap;
+  transition: background 0.15s, color 0.15s;
+  text-decoration: none;
+}
+
+.nav-dropdown__menu li a:hover {
+  background: #2a7d2e;
+  color: #fff;
+}
+
+/* Show on hover — desktop */
+.nav-dropdown:hover .nav-dropdown__menu {
+  display: flex;
+}
+
+.nav-dropdown:hover .nav-dropdown__arrow {
+  transform: rotate(180deg);
+}
+
+/* ===================== MOBILE DROPDOWN ===================== */
+@media (max-width: 768px) {
+  .nav-dropdown__menu {
+    position: static;
+    box-shadow: none;
+    border-top: none;
+    border-left: 3px solid #2a7d2e;
+    border-radius: 0;
+    background: rgba(255,255,255,0.08);
+    padding: 0;
+    display: none;
+    min-width: 100%;
+  }
+
+  .nav-dropdown__menu li a {
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 0.85rem;
+    background: transparent;
+  }
+
+  .nav-dropdown__menu li a:hover {
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+  }
+
+  /* Toggle on tap for mobile */
+  .nav-dropdown.open .nav-dropdown__menu {
+    display: flex;
+  }
+
+  .nav-dropdown.open .nav-dropdown__arrow {
+    transform: rotate(180deg);
+  }
+}
