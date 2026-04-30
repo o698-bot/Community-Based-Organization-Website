@@ -1734,4 +1734,459 @@ footer {
 
 
 
+/*home page programs*/
+.prg-section {
+  padding: 90px 8% 80px;
+  background: #faf8f4;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* Header */
+.prg-header {
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto 64px;
+}
+
+.prg-eyebrow {
+  display: inline-block;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #2a7d2e;
+  margin-bottom: 14px;
+}
+
+.prg-title {
+  font-family: "Julius Sans One", sans-serif;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 400;
+  color: #1a1a1a;
+  text-align: center;
+  margin-bottom: 18px;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+}
+
+.prg-desc {
+  font-family: 'Lato', sans-serif;
+  font-size: clamp(0.9rem, 1.3vw, 1rem);
+  color: #555;
+  line-height: 1.8;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Grid — 5 cards in a row */
+.prg-grid {
+  display: flex;
+  gap: 28px;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+/* Card */
+.prg-card {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Circle image */
+.prg-card__circle {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 24px;
+  flex-shrink: 0;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.13);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.prg-card:hover .prg-card__circle {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 20px 48px rgba(42,125,46,0.18);
+}
+
+.prg-card__circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.prg-card:hover .prg-card__circle img {
+  transform: scale(1.08);
+}
+
+/* Number badge */
+.prg-card__num {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 34px;
+  height: 34px;
+  background: #2a7d2e;
+  color: #fff;
+  border-radius: 50%;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.03em;
+  border: 2px solid #faf8f4;
+}
+
+/* Card text */
+.prg-card__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.prg-card__body h3 {
+  font-family: "Julius Sans One", sans-serif;
+  font-size: clamp(0.85rem, 1.2vw, 1rem);
+  font-weight: 400;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+  text-align: center;
+  line-height: 1.3;
+  letter-spacing: 0.01em;
+}
+
+.prg-card__body p {
+  font-family: 'Lato', sans-serif;
+  font-size: clamp(0.78rem, 1vw, 0.88rem);
+  color: #555;
+  line-height: 1.7;
+  text-align: center;
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+.prg-card__btn {
+  display: inline-block;
+  background: #2a7d2e;
+  color: #fff;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 10px 24px;
+  border-radius: 30px;
+  transition: background 0.2s, transform 0.15s;
+  margin-top: auto;
+}
+
+.prg-card__btn:hover {
+  background: #1f5e22;
+  transform: translateY(-2px);
+}
+
+/* =======================================================
+   RESPONSIVE
+   ======================================================= */
+
+/* Tablet — 3 + 2 */
+@media (max-width: 1024px) {
+  .prg-grid {
+    flex-wrap: wrap;
+    gap: 32px;
+  }
+  .prg-card {
+    flex: 0 0 calc(33.33% - 22px);
+    min-width: 200px;
+  }
+  .prg-card__circle {
+    width: 170px;
+    height: 170px;
+  }
+}
+
+/* Tablet small — 2 columns */
+@media (max-width: 768px) {
+  .prg-section {
+    padding: 60px 24px;
+  }
+  .prg-grid {
+    gap: 36px;
+  }
+  .prg-card {
+    flex: 0 0 calc(50% - 18px);
+  }
+  .prg-card__circle {
+    width: 150px;
+    height: 150px;
+  }
+  .prg-card__body h3 {
+    font-size: 0.95rem;
+  }
+  .prg-card__body p {
+    font-size: 0.85rem;
+  }
+}
+
+/* Mobile — single column */
+@media (max-width: 480px) {
+  .prg-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 44px;
+  }
+  .prg-card {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 320px;
+  }
+  .prg-card__circle {
+    width: 180px;
+    height: 180px;
+  }
+  .prg-header {
+    margin-bottom: 44px;
+  }
+}
+
+
+
+/*tracking outcomes*/
+.track-section {
+  padding: 90px 8%;
+  background: #0d1f10;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Subtle radial glow top-right */
+.track-section::before {
+  content: '';
+  position: absolute;
+  top: -200px;
+  right: -200px;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(60,190,113,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Header */
+.track-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 60px;
+}
+
+.track-eyebrow {
+  display: inline-block;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #3cbe71;
+  margin-bottom: 14px;
+}
+
+.track-title {
+  font-family: "Julius Sans One", sans-serif;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 18px;
+  line-height: 1.1;
+}
+
+.track-subtitle {
+  font-family: 'Lato', sans-serif;
+  font-size: clamp(0.88rem, 1.2vw, 0.98rem);
+  color: rgba(255,255,255,0.6);
+  line-height: 1.8;
+  text-align: center;
+}
+
+/* Grid — featured card wider on desktop */
+.track-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 48px;
+  align-items: stretch;
+}
+
+/* Base card */
+.track-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  padding: 32px 26px;
+  transition: background 0.25s, transform 0.25s, border-color 0.25s;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* Green underline slides in on hover */
+.track-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 100%; height: 3px;
+  background: linear-gradient(to right, #2a7d2e, #3cbe71);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.track-card:hover {
+  background: rgba(60,190,113,0.07);
+  border-color: rgba(60,190,113,0.25);
+  transform: translateY(-4px);
+}
+
+.track-card:hover::after {
+  transform: scaleX(1);
+}
+
+/* Featured card — always lit */
+.track-card--featured {
+  background: linear-gradient(145deg, rgba(42,125,46,0.3) 0%, rgba(42,125,46,0.12) 100%);
+  border-color: rgba(60,190,113,0.3);
+}
+
+.track-card--featured::after {
+  transform: scaleX(1);
+}
+
+.track-card__icon {
+  font-size: 2rem;
+  margin-bottom: 14px;
+  display: block;
+  line-height: 1;
+}
+
+.track-card__stat {
+  font-family: 'Lato', sans-serif;
+  font-size: 2.4rem;
+  font-weight: 900;
+  color: #3cbe71;
+  line-height: 1;
+  margin-bottom: 10px;
+  letter-spacing: -0.02em;
+}
+
+.track-card__title {
+  font-family: "Julius Sans One", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: #fff;
+  margin-bottom: 12px;
+  text-align: left;
+  letter-spacing: 0.02em;
+  line-height: 1.3;
+}
+
+.track-card__text {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.75;
+  text-align: left;
+}
+
+/* CTA row */
+.track-cta {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.track-btn-primary {
+  background: #2a7d2e;
+  color: #fff;
+  padding: 13px 32px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 0.88rem;
+  letter-spacing: 0.04em;
+  transition: background 0.2s, transform 0.15s;
+  display: inline-block;
+}
+.track-btn-primary:hover { background: #1f5e22; transform: translateY(-2px); }
+
+.track-btn-secondary {
+  border: 1.5px solid rgba(255,255,255,0.3);
+  color: rgba(255,255,255,0.85);
+  padding: 12px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-family: 'Lato', sans-serif;
+  font-weight: 600;
+  font-size: 0.88rem;
+  transition: border-color 0.2s, color 0.2s, transform 0.15s;
+  display: inline-block;
+}
+.track-btn-secondary:hover { border-color: #3cbe71; color: #3cbe71; transform: translateY(-2px); }
+
+/* =======================================================
+   RESPONSIVE
+   ======================================================= */
+
+@media (max-width: 1024px) {
+  .track-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .track-card--featured {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .track-section {
+    padding: 60px 24px;
+  }
+  .track-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .track-card--featured {
+    grid-column: span 1;
+  }
+  .track-cta {
+    flex-direction: column;
+    align-items: center;
+  }
+  .track-btn-primary,
+  .track-btn-secondary {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+}
+
 

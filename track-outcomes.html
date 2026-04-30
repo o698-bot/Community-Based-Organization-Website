@@ -1,0 +1,281 @@
+<!-- 
+=======================================================
+  REPLACE your entire <section class="progress-section">
+  block in index.html with the HTML below.
+  Paste the CSS into your styles.css.
+=======================================================
+-->
+
+<section class="track-section">
+  <div class="track-header">
+    <span class="track-eyebrow">Tracking Outcomes</span>
+    <h2 class="track-title">MEASURING REAL<br>COMMUNITY CHANGE</h2>
+    <p class="track-subtitle">We monitor and evaluate our programs using data and participant feedback to track outcomes, identify improvements, and optimize resources for sustainable community benefits.</p>
+  </div>
+
+  <div class="track-grid">
+
+    <div class="track-card track-card--featured">
+      <div class="track-card__icon">🍽️</div>
+      <div class="track-card__stat">80%+</div>
+      <h3 class="track-card__title">Improved Livelihoods</h3>
+      <p class="track-card__text">Over 80% of our beneficiaries now enjoy three meals a day and can meet basic needs such as shelter and clothing — a significant improvement in quality of life through skills training and income-generating opportunities.</p>
+    </div>
+
+    <div class="track-card">
+      <div class="track-card__icon">💰</div>
+      <div class="track-card__stat">Growing</div>
+      <h3 class="track-card__title">Financial Independence</h3>
+      <p class="track-card__text">Our women have grown their savings, accessed credit, and increased household income — empowered to make financial decisions and build more secure, sustainable futures for their families.</p>
+    </div>
+
+    <div class="track-card">
+      <div class="track-card__icon">🧠</div>
+      <div class="track-card__stat">Stronger</div>
+      <h3 class="track-card__title">Wellbeing & Resilience</h3>
+      <p class="track-card__text">Our programs have strengthened mental health, boosted confidence, and enhanced decision-making. Psychosocial support and life skills training help individuals and families cope with challenges and lead healthier lives.</p>
+    </div>
+
+    <div class="track-card">
+      <div class="track-card__icon">👨‍👩‍👧</div>
+      <div class="track-card__stat">Happier</div>
+      <h3 class="track-card__title">Stronger Families</h3>
+      <p class="track-card__text">Empowered women are making their own decisions, contributing to household wellbeing, and helping reduce gender-based violence — creating safer, more resilient, and happier families across Mathare.</p>
+    </div>
+
+  </div>
+
+  <div class="track-cta">
+    <a href="impact.html" class="track-btn-secondary">See Full Impact →</a>
+    <a href="#" class="track-btn-primary">Donate Now</a>
+  </div>
+</section>
+
+
+<style>
+/* =======================================================
+   TRACKING OUTCOMES — paste into styles.css
+   Prefix: .track-  (no conflicts with existing code)
+   ======================================================= */
+
+.track-section {
+  padding: 90px 8%;
+  background: #0d1f10;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Subtle radial glow top-right */
+.track-section::before {
+  content: '';
+  position: absolute;
+  top: -200px;
+  right: -200px;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(60,190,113,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Header */
+.track-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 60px;
+}
+
+.track-eyebrow {
+  display: inline-block;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #3cbe71;
+  margin-bottom: 14px;
+}
+
+.track-title {
+  font-family: "Julius Sans One", sans-serif;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 18px;
+  line-height: 1.1;
+}
+
+.track-subtitle {
+  font-family: 'Lato', sans-serif;
+  font-size: clamp(0.88rem, 1.2vw, 0.98rem);
+  color: rgba(255,255,255,0.6);
+  line-height: 1.8;
+  text-align: center;
+}
+
+/* Grid — featured card wider on desktop */
+.track-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 48px;
+  align-items: stretch;
+}
+
+/* Base card */
+.track-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  padding: 32px 26px;
+  transition: background 0.25s, transform 0.25s, border-color 0.25s;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* Green underline slides in on hover */
+.track-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 100%; height: 3px;
+  background: linear-gradient(to right, #2a7d2e, #3cbe71);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.track-card:hover {
+  background: rgba(60,190,113,0.07);
+  border-color: rgba(60,190,113,0.25);
+  transform: translateY(-4px);
+}
+
+.track-card:hover::after {
+  transform: scaleX(1);
+}
+
+/* Featured card — always lit */
+.track-card--featured {
+  background: linear-gradient(145deg, rgba(42,125,46,0.3) 0%, rgba(42,125,46,0.12) 100%);
+  border-color: rgba(60,190,113,0.3);
+}
+
+.track-card--featured::after {
+  transform: scaleX(1);
+}
+
+.track-card__icon {
+  font-size: 2rem;
+  margin-bottom: 14px;
+  display: block;
+  line-height: 1;
+}
+
+.track-card__stat {
+  font-family: 'Lato', sans-serif;
+  font-size: 2.4rem;
+  font-weight: 900;
+  color: #3cbe71;
+  line-height: 1;
+  margin-bottom: 10px;
+  letter-spacing: -0.02em;
+}
+
+.track-card__title {
+  font-family: "Julius Sans One", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: #fff;
+  margin-bottom: 12px;
+  text-align: left;
+  letter-spacing: 0.02em;
+  line-height: 1.3;
+}
+
+.track-card__text {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.75;
+  text-align: left;
+}
+
+/* CTA row */
+.track-cta {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.track-btn-primary {
+  background: #2a7d2e;
+  color: #fff;
+  padding: 13px 32px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 0.88rem;
+  letter-spacing: 0.04em;
+  transition: background 0.2s, transform 0.15s;
+  display: inline-block;
+}
+.track-btn-primary:hover { background: #1f5e22; transform: translateY(-2px); }
+
+.track-btn-secondary {
+  border: 1.5px solid rgba(255,255,255,0.3);
+  color: rgba(255,255,255,0.85);
+  padding: 12px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-family: 'Lato', sans-serif;
+  font-weight: 600;
+  font-size: 0.88rem;
+  transition: border-color 0.2s, color 0.2s, transform 0.15s;
+  display: inline-block;
+}
+.track-btn-secondary:hover { border-color: #3cbe71; color: #3cbe71; transform: translateY(-2px); }
+
+/* =======================================================
+   RESPONSIVE
+   ======================================================= */
+
+@media (max-width: 1024px) {
+  .track-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .track-card--featured {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .track-section {
+    padding: 60px 24px;
+  }
+  .track-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .track-card--featured {
+    grid-column: span 1;
+  }
+  .track-cta {
+    flex-direction: column;
+    align-items: center;
+  }
+  .track-btn-primary,
+  .track-btn-secondary {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+}
+</style>
