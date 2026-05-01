@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Women Empowerment Program | One Touch ICT</title>
+
+  <style>
+    body { margin:0; font-family: Arial, sans-serif; }
+
+    .pg-outcomes {
+      padding: 80px 8%;
+      background: #fff;
+    }
+
+    .pg-outcomes__top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      margin-bottom: 50px;
+    }
+
+    .pg-outcomes__header {
+      flex: 1;
+    }
+
+    .pg-outcomes__image {
+      flex: 0 0 40%;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    }
+
+    .pg-outcomes__image img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+    }
+
+    .pg-outcomes__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .pg-outcome-card {
+      background: #f7fdf8;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    @media (max-width: 900px) {
+      .pg-outcomes__top {
+        flex-direction: column;
+      }
+
+      .pg-outcomes__grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<section class="pg-outcomes">
+
+  <div class="pg-outcomes__top">
+
+    <div class="pg-outcomes__header">
+      <h2>Expected Outcomes</h2>
+      <p>Financial independence ripples outward — into safer homes, healthier children, and stronger communities.</p>
+    </div>
+
+    <div class="pg-outcomes__image">
+      <img src="assets/images/w1.jpg" alt="Women financial empowerment">
+    </div>
+
+  </div>
+
+  <div class="pg-outcomes__grid">
+    <div class="pg-outcome-card">💰 Income Generation</div>
+    <div class="pg-outcome-card">🏪 Market Access</div>
+    <div class="pg-outcome-card">🏦 Financial Inclusion</div>
+    <div class="pg-outcome-card">🛡️ Reduced GBV</div>
+    <div class="pg-outcome-card">📚 Education Investment</div>
+    <div class="pg-outcome-card">🌿 Long-term Resilience</div>
+  </div>
+
+</section>
+
+</body>
+</html>

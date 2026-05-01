@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mosaic + Featured Image Layout</title>
+  <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+
+    /* ============================================
+       PASTE THIS CSS INTO YOUR EXISTING STYLESHEET
+       ============================================ */
+
+    /* ---- PHOTO MOSAIC ---- */
+    .pg-section__image--mosaic {
+      border-radius: 0;
+      overflow: visible;
+      box-shadow: none;
+    }
+
+    .pg-mosaic {
+      display: grid;
+      border-radius: 12px 12px 0 0;
+      overflow: hidden;
+      gap: 3px;
+      background: #ccc;
+      width: 100%;
+    }
+
+    /* Option A: tall left + 2 stacked right */
+    .pg-mosaic--3 {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 190px 190px;
+    }
+    .pg-mosaic--3 .pg-mosaic__item:first-child {
+      grid-row: span 2;
+    }
+
+    /* Option B: 2x2 grid */
+    .pg-mosaic--4 {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 190px 190px;
+    }
+
+    .pg-mosaic__item {
+      overflow: hidden;
+    }
+    .pg-mosaic__item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .pg-mosaic__item:hover img {
+      transform: scale(1.04);
+    }
+
+    /* ---- FEATURED IMAGE BELOW MOSAIC ---- */
+    .pg-mosaic__featured {
+      margin-top: 3px; /* matches mosaic gap — ties them together */
+      border-radius: 0 0 12px 12px; /* rounds bottom to complete the block */
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+    }
+
+    .pg-mosaic__featured img {
+      width: 100%;
+      height: 180px; /* adjust to taste */
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .pg-mosaic__featured:hover img {
+      transform: scale(1.04);
+    }
+
+    /* ---- RESPONSIVE ---- */
+    @media (max-width: 900px) {
+      .pg-mosaic--3,
+      .pg-mosaic--4 {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 140px 140px;
+      }
+      .pg-mosaic--3 .pg-mosaic__item:first-child {
+        grid-row: span 2;
+      }
+      .pg-mosaic__featured img {
+        height: 150px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .pg-mosaic--3,
+      .pg-mosaic--4 {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(auto-fill, 200px);
+        border-radius: 12px 12px 0 0;
+      }
+      .pg-mosaic--3 .pg-mosaic__item:first-child {
+        grid-row: span 1;
+      }
+      .pg-mosaic__featured img {
+        height: 200px;
+      }
+    }
+
+
+    /* ============================================
+       DEMO STYLES BELOW — NOT NEEDED IN YOUR PROJECT
+       ============================================ */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Lato', sans-serif; background: #f7fdf8; }
+
+    .pg-section {
+      padding: 80px 8%;
+      width: 100%;
+    }
+    .pg-section--light { background: #fff; }
+    .pg-section--tinted { background: #f7fdf8; }
+
+    .pg-section__inner {
+      display: flex;
+      gap: 60px;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .pg-section__inner.reverse { flex-direction: row-reverse; }
+
+    .pg-section__image {
+      flex: 0 0 46%;
+    }
+
+    .pg-section__text { flex: 1; }
+
+    .pg-section__label {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #2a7d2e;
+      border: 1.5px solid #2a7d2e;
+      padding: 4px 12px;
+      border-radius: 30px;
+      margin-bottom: 18px;
+    }
+
+    .pg-section__text h2 {
+      font-family: "Julius Sans One", sans-serif;
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      font-weight: 400;
+      color: #111;
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+
+    .pg-section__text p {
+      font-size: 0.96rem;
+      color: #444;
+      line-height: 1.85;
+      margin-bottom: 16px;
+    }
+
+    @media (max-width: 900px) {
+      .pg-section__inner,
+      .pg-section__inner.reverse { flex-direction: column; gap: 30px; }
+      .pg-section__image { flex: 0 0 auto; width: 100%; }
+    }
+    @media (max-width: 600px) {
+      .pg-section { padding: 50px 24px; }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- ============================================
+       SITUATION SECTION — Option A (3 photos + featured)
+       ============================================ -->
+  <section class="pg-section pg-section--tinted" id="situation">
+    <div class="pg-section__inner">
+
+      <!-- IMAGE BLOCK: replace single image with mosaic + featured -->
+      <div class="pg-section__image pg-section__image--mosaic">
+
+        <!-- Mosaic grid: 3 photos -->
+        <div class="pg-mosaic pg-mosaic--3">
+          <div class="pg-mosaic__item">
+            <img src="assets/images/vocation11.jpeg" alt="Situation 1">
+          </div>
+          <div class="pg-mosaic__item">
+            <img src="assets/images/vocation12.jpeg" alt="Situation 2">
+          </div>
+          <div class="pg-mosaic__item">
+            <img src="assets/images/vocation13.jpeg" alt="Situation 3">
+          </div>
+        </div>
+
+        <!-- Featured image below the mosaic -->
+        <div class="pg-mosaic__featured">
+          <img src="assets/images/vocation13.jpeg" alt="Featured situation photo">
+        </div>
+
+      </div>
+
+      <div class="pg-section__text">
+        <span class="pg-section__label">Situation</span>
+        <h2>Trapped in Cycles of Dependency</h2>
+        <p>In many informal settlements, women face significant economic and social barriers that limit their ability to earn a stable income and fully participate in community life. Limited access to skills training, financial services, and markets often traps households in cycles of poverty and dependence. This economic vulnerability is closely linked to broader social challenges, including gender-based violence, early pregnancies, and increased health risks such as HIV and AIDS.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       SOLUTION SECTION — Option B (4 photos + featured)
+       ============================================ -->
+  <section class="pg-section pg-section--light">
+    <div class="pg-section__inner reverse">
+
+      <!-- IMAGE BLOCK: 4-photo mosaic + featured -->
+      <div class="pg-section__image pg-section__image--mosaic">
+
+        <!-- Mosaic grid: 4 photos (2x2) -->
+        <div class="pg-mosaic pg-mosaic--4">
+          <div class="pg-mosaic__item">
+            <img src="assets/images/vocation11.jpeg" alt="Solution 1">
+          </div>
+          <div class="pg-mosaic__item">
+            <img src="assets/images/vocation12.jpeg" alt="Solution 2">
+          </div>
+          <div class="pg-mosaic__item">
+            <img src="assets/images/vocation13.jpeg" alt="Solution 3">
+          </div>
+          <div class="pg-mosaic__item">
+            <img src="assets/images/vocation14.jpeg" alt="Solution 4">
+          </div>
+        </div>
+
+        <!-- Featured image below the mosaic -->
+        <div class="pg-mosaic__featured">
+          <img src="assets/images/vocation13.jpeg" alt="Featured solution photo">
+        </div>
+
+      </div>
+
+      <div class="pg-section__text">
+        <span class="pg-section__label">Solution</span>
+        <h2>Skills, Markets, and Savings Groups</h2>
+        <p>Our Women's Empowerment Program addresses these interconnected challenges by equipping women with practical, income-generating skills that can quickly translate into livelihoods.</p>
+        <p>To ensure sustainability, we link women to local and wider markets where they can sell their products and build reliable customer bases.</p>
+        <p>In addition, we support the formation and strengthening of savings groups (chamas), where women pool resources, save collectively, and access low-interest loans when needed.</p>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
