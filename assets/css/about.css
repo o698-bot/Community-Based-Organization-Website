@@ -1275,3 +1275,138 @@ footer {
     transform: rotate(180deg);
   }
 }
+
+
+
+
+/*message from the director*/
+
+
+    .dm-section {
+      background: #fff;
+      padding: 5rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .dm-section::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 340px; height: 340px;
+      background: radial-gradient(circle at top left, #e8f5ee 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .dm-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 5rem;
+    }
+    .dm-label {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #2d7a4f;
+      margin-bottom: 0.6rem;
+      text-align: left;
+    }
+    .dm-heading {
+  font-family: 'Julius Sans One', sans-serif;
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      font-weight: 400;
+      color: #1a1a1a;
+      margin: 0 0 3rem;
+      line-height: 1.2;
+    }
+    .dm-heading em {
+      font-style: italic;
+      color: #2d7a4f;
+    }
+    .dm-grid {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 4rem;
+      align-items: start;
+      max-width: 960px;
+    }
+    .dm-photo-frame {
+      width: 100%;
+      aspect-ratio: 3/4;
+      background: #e8f5ee;
+      border-radius: 2px;
+      border: 1px solid #c8e6d4;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+    }
+    .dm-photo-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .dm-photo-name {
+      font-size: 12px;
+      color: #5a7a68;
+      letter-spacing: 0.05em;
+    }
+    .dm-accent-bar {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 4px;
+      background: #2d7a4f;
+    }
+    .dm-sig-card {
+      margin-top: 1.25rem;
+      padding: 1rem 1.25rem;
+      border-left: 3px solid #2d7a4f;
+      background: #f7fbf9;
+    }
+    .dm-sig-name {
+  font-family: 'Julius Sans One', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #1a1a1a;
+      margin-bottom: 2px;
+    }
+    .dm-sig-title {
+      font-size: 12px;
+      color: #5a7a68;
+      font-style: italic;
+      line-height: 1.5;
+    }
+    .dm-content {
+      padding-top: 0.25rem;
+    }
+    .dm-quote-mark {
+  font-family: 'Julius Sans One', sans-serif;
+      font-size: 5rem;
+      line-height: 0.6;
+      color: #c8e6d4;
+      display: block;
+      margin-bottom: 0.5rem;
+      user-select: none;
+    }
+    .dm-body p {
+      font-size: 15px;
+      line-height: 1.85;
+      color: #3a3a3a;
+      margin-bottom: 1.25rem;
+      text-align: left;
+    }
+    .dm-body p:last-child { margin-bottom: 0; }
+    .dm-divider {
+      width: 40px;
+      height: 2px;
+      background: #2d7a4f;
+      margin: 2rem 0;
+    }
+
+    @media (max-width: 680px) {
+      .dm-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .dm-photo-frame { max-width: 220px; }
+    }
