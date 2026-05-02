@@ -1086,7 +1086,7 @@ padding: 20px;
   font-family: "Julius Sans One", sans-serif;
   font-size: clamp(1.8rem, 4vw, 3rem);
   font-weight: 400;
-  color: #1a1a1a;
+  color:rgb(0, 0, 0);
   text-align: center;
   margin-bottom: 18px;
   line-height: 1.1;
@@ -1095,7 +1095,7 @@ padding: 20px;
 .vid-subtitle {
   font-family: 'Lato', sans-serif;
   font-size: clamp(1.2rem, 1.3vw, 1rem);
-  color: #555;
+  color: black;
   line-height: 1.8;
   text-align: center;
 }
@@ -1157,7 +1157,7 @@ padding: 20px;
 
 .vid-v1 {
   padding: 90px 8%;
-  background: #0d1f10;
+  background: white;
 }
 
 .vid-v1 .vid-eyebrow { color: #3cbe71; }
@@ -1171,9 +1171,9 @@ padding: 20px;
   align-items: start;
 }
 
-.vid-v1__featured .vid-v1__frame {
-  box-shadow: 0 24px 60px rgba(0,0,0,0.5);
-}
+/* .vid-v1__featured .vid-v1__frame {
+  box-shadow: 0 24px 60px rgba(46, 237, 75, 0.5);
+} */
 
 .vid-v1__info {
   padding: 20px 0 0;
@@ -1183,7 +1183,7 @@ padding: 20px;
   font-family: "Julius Sans One", sans-serif;
   font-size: clamp(2rem, 2vw, 2rem);
   font-weight: 400;
-  color: #fff;
+  color: black;
   margin-bottom: 10px;
   text-align: left;
   line-height: 1.3;
@@ -1192,7 +1192,7 @@ padding: 20px;
 .vid-v1__info p {
   font-family: 'Lato', sans-serif;
   font-size: 1.25rem;
-  color: rgba(255,255,255,0.6);
+  color: black;
   line-height: 1.7;
   text-align: left;
 }

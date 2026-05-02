@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | One Touch ICT</title>
+  <link rel="icon" type="image/x-icon" href="assets/images/fav.jpeg">
+  <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/contact.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+</head>
+<body>
+
+  <!-- YOUR EXISTING HEADER -->
+  <header>
+    <div class="container">
+      <div class="logo">
+        <a href="index.html" class="logo-link"><h1>One Touch ICT</h1></a>
+      </div>
+      <div class="hamburger" id="hamburger">☰</div>
+      <nav id="nav-menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li class="nav-dropdown">
+            <a href="programs.html" class="nav-dropdown__trigger">Programs <span class="nav-dropdown__arrow">▾</span></a>
+            <ul class="nav-dropdown__menu">
+              <li><a href="vocational-skills.html">Vocational Skills Training</a></li>
+              <li><a href="women-empowerment-program.html">Women Empowerment Program</a></li>
+              <li><a href="mental-health.html">Mental Health & Psychosocial Support</a></li>
+              <li><a href="community-social-protection-outreach.html">Community Social Protection</a></li>
+              <li><a href="financial-empowerment.html">Financial Inclusion Program</a></li>
+            </ul>
+          </li>
+          <li class="nav-dropdown">
+            <a href="impact.html">Impact</a>
+          </li>
+          <li><a href="contact.html" style="font-weight:400;">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="ct-page">
+
+    <!-- HERO -->
+    <section class="ct-hero">
+        <img class="ct-hero__bg" src="assets/images/contact.jpg" alt="One Touch ICT community">
+      <div class="ct-hero__inner">
+        <div class="ct-hero__tag">We'd love to hear from you</div>
+        <h1>LET'S BUILD<br><em>SOMETHING</em><br>TOGETHER</h1>
+        <p class="ct-hero__sub">Whether you want to volunteer, donate, partner with us, or simply learn more about our work in Mathare — we are here and we are listening.</p>
+      </div>
+    </section>
+
+    <!-- QUICK CONTACT STRIPS -->
+    <div class="ct-strips">
+      <a href="tel:+254702369598" class="ct-strip">
+        <div class="ct-strip__icon"><i class="fa-solid fa-phone"></i></div>
+        <div>
+          <div class="ct-strip__label">Call us</div>
+          <div class="ct-strip__value">+254 702 369 598</div>
+        </div>
+      </a>
+      <a href="mailto:info@onetouchict.org" class="ct-strip">
+        <div class="ct-strip__icon"><i class="fa-solid fa-envelope"></i></div>
+        <div>
+          <div class="ct-strip__label">Email us</div>
+          <div class="ct-strip__value">info@onetouchict.org</div>
+        </div>
+      </a>
+      <a href="https://wa.me/254702369598" target="_blank" class="ct-strip">
+        <div class="ct-strip__icon"><i class="fa-brands fa-whatsapp"></i></div>
+        <div>
+          <div class="ct-strip__label">WhatsApp</div>
+          <div class="ct-strip__value">Chat with us now</div>
+        </div>
+      </a>
+    </div>
+
+    <!-- MAIN: FORM + INFO -->
+    <!-- <div class="ct-main"> -->
+
+      <!-- FORM SIDE -->
+      <!-- <div class="ct-form-side">
+        <span class="ct-form-eyebrow">Send a message</span>
+        <h2 class="ct-form-title">How Can We<br>Help You?</h2>
+        <p class="ct-form-desc">Pick a topic below and fill in your details. We respond to every message within 2 working days.</p> -->
+
+        <!-- Topic pills -->
+        <!-- <div class="ct-topics">
+          <button class="ct-topic ct-active" onclick="selectTopic(this)">General Enquiry</button>
+          <button class="ct-topic" onclick="selectTopic(this)">Volunteer</button>
+          <button class="ct-topic" onclick="selectTopic(this)">Donate</button>
+          <button class="ct-topic" onclick="selectTopic(this)">Partnership</button>
+          <button class="ct-topic" onclick="selectTopic(this)">Enrol in a Program</button>
+          <button class="ct-topic" onclick="selectTopic(this)">Media & Press</button>
+        </div> -->
+
+        <!-- Form -->
+        <!-- <form class="ct-form" id="ct-contact-form" onsubmit="submitForm(event)">
+          <div class="ct-field-row">
+            <div class="ct-field">
+              <label for="ct-fname">First Name</label>
+              <input type="text" id="ct-fname" placeholder="Your first name" required>
+            </div>
+            <div class="ct-field">
+              <label for="ct-lname">Last Name</label>
+              <input type="text" id="ct-lname" placeholder="Your last name" required>
+            </div>
+          </div>
+          <div class="ct-field">
+            <label for="ct-email">Email Address</label>
+            <input type="email" id="ct-email" placeholder="you@example.com" required>
+          </div>
+          <div class="ct-field">
+            <label for="ct-phone">Phone Number (optional)</label>
+            <input type="tel" id="ct-phone" placeholder="+254 ...">
+          </div>
+          <div class="ct-field">
+            <label for="ct-topic-hidden">Topic</label>
+            <input type="text" id="ct-topic-hidden" value="General Enquiry" readonly style="background:#f0faf3;color:#2a7d2e;font-weight:600;cursor:default;">
+          </div>
+          <div class="ct-field">
+            <label for="ct-message">Your Message</label>
+            <textarea id="ct-message" placeholder="Tell us how we can help..." required></textarea>
+          </div>
+          <button type="submit" class="ct-submit">
+            Send Message <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </form> -->
+
+        <!-- Success state -->
+        <!-- <div class="ct-success" id="ct-success">
+          <div class="ct-success__icon">✅</div>
+          <h3>Message Sent!</h3>
+          <p>Thank you for reaching out. Our team will get back to you within 2 working days.</p>
+        </div>
+      </div> -->
+
+      <!-- INFO SIDE -->
+      <!-- <div class="ct-info-side"> -->
+
+        <!-- Who to reach -->
+        <!-- <div>
+          <span class="ct-reach-title">Who to reach</span>
+          <div class="ct-person-cards">
+            <div class="ct-person">
+              <div class="ct-person__avatar">DM</div>
+              <div>
+                <div class="ct-person__name">David Muthini Mutiso</div>
+                <div class="ct-person__role">Chairperson, Board of Directors</div>
+                <a href="mailto:info@onetouchict.org" class="ct-person__email">info@onetouchict.org</a>
+              </div>
+            </div>
+            <div class="ct-person">
+              <div class="ct-person__avatar">OT</div>
+              <div>
+                <div class="ct-person__name">One Touch ICT Programs</div>
+                <div class="ct-person__role">Programs & Training Enquiries</div>
+                <a href="mailto:info@onetouchict.org" class="ct-person__email">info@onetouchict.org</a>
+              </div>
+            </div>
+          </div>
+        </div> -->
+
+        <!-- Office info -->
+        <!-- <div class="ct-office">
+          <div class="ct-office__header">
+            <div class="ct-office__icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div class="ct-office__name">Our Office</div>
+          </div>
+          <div class="ct-office__details">
+            Mathare Slums, along Juja Road<br>
+            Nairobi, Kenya
+          </div>
+          <div class="ct-office__hours">
+            <span>Mon – Fri</span>
+            <span>8:00 AM – 5:00 PM</span>
+          </div>
+          <div class="ct-office__hours" style="margin-top:4px">
+            <span>Saturday</span>
+            <span>9:00 AM – 1:00 PM</span>
+          </div>
+        </div> -->
+
+        <!-- Map -->
+        <div class="ct-map-wrap">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8227!2d36.8619!3d-1.2635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f11b9f1a1a1a1%3A0x1!2sMathare%2C+Nairobi!5e0!3m2!1sen!2ske!4v1"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="One Touch ICT location on map">
+          </iframe>
+        </div>
+
+        <!-- Social -->
+        <div>
+          <span class="ct-reach-title">Follow us</span>
+          <div class="ct-social">
+            <a href="#" class="ct-social__btn" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" class="ct-social__btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="ct-social__btn" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://wa.me/254702369598" class="ct-social__btn" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- DONATE BAND -->
+    <div class="ct-donate">
+      <div class="ct-donate__text">
+        <h2>Want to Support<br>Our Work?</h2>
+        <p>Every contribution — however large or small — funds practical skills training and changes lives in Mathare.</p>
+      </div>
+      <a href="#" class="ct-donate__btn">Donate Now →</a>
+    </div>
+
+    <!-- YOUR EXISTING FOOTER -->
+    <footer id="f">
+      <div class="footer-left">
+        <p><strong>Address</strong><br>Mathare slums along Juja Road, Nairobi, Kenya</p>
+        <p><strong>Contact</strong><br>+254 702 369 598<br><a href="mailto:info@onetouchict.org">info@onetouchict.org</a></p>
+        <div class="social-icons">
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+        <div class="footer-img">
+          <img src="assets/images/one touch ict logo.png" alt="One Touch ICT">
+        </div>
+      </div>
+      <div class="footer-links">
+        <ul style="display:block;">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="programs.html">Programs</a></li>
+          <li><a href="training.html">Training</a></li>
+          <li><a href="impact.html">Impact</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+        <ul style="display:block;">
+          <li><a href="#">Donate</a></li>
+          <li><a href="#">Partners</a></li>
+          <li><a href="#">Resources</a></li>
+          <li><a href="impact.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </footer>
+    <div class="footer-bottom">© 2024 One Touch ICT. All rights reserved.
+      <a href="#">Privacy policy</a> | <a href="#">Terms of service</a> | <a href="#">Cookies settings</a>
+    </div>
+    <div class="footer-bottom">Powered by: <a href="https://wa.me/254101522375">Er Solutions & Studio</a></div>
+
+  </main>
+
+  <script>
+    /* ---- Nav ---- */
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+    hamburger.addEventListener('click', (e) => { e.stopPropagation(); navMenu.classList.toggle('active'); });
+    navMenu.addEventListener('click', (e) => { e.stopPropagation(); });
+    document.addEventListener('click', () => { navMenu.classList.remove('active'); });
+    document.querySelectorAll('.nav-dropdown__trigger').forEach(trigger => {
+      trigger.addEventListener('click', (e) => {
+        if (window.innerWidth <= 768) { e.preventDefault(); trigger.closest('.nav-dropdown').classList.toggle('open'); }
+      });
+    });
+
+    /* ---- Topic pills ---- */
+    function selectTopic(btn) {
+      document.querySelectorAll('.ct-topic').forEach(b => b.classList.remove('ct-active'));
+      btn.classList.add('ct-active');
+      document.getElementById('ct-topic-hidden').value = btn.textContent;
+    }
+
+    /* ---- Form submit ---- */
+    function submitForm(e) {
+      e.preventDefault();
+      const form = document.getElementById('ct-contact-form');
+      const success = document.getElementById('ct-success');
+      form.style.display = 'none';
+      success.style.display = 'flex';
+    }
+  </script>
+
+</body>
+</html>

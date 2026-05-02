@@ -489,3 +489,44 @@
   .pg-cta__actions a { text-align: center; }
   .pg-section__image img { height: 260px; }
 }
+
+/*expected outcome image*/
+.pg-outcomes__top {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 48px;
+}
+
+.pg-outcomes__header {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.pg-outcomes__side-image {
+  flex: 0 0 42%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 16px 48px rgba(0,0,0,0.1);
+}
+
+.pg-outcomes__side-image img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .pg-outcomes__top {
+    flex-direction: column;
+    gap: 28px;
+  }
+  .pg-outcomes__side-image {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+  .pg-outcomes__side-image img {
+    height: 240px;
+  }
+}
